@@ -1,0 +1,7 @@
+[packages]
+requests = "*"
+pyopenmensa = "*"
+flask = "*"
+
+[dev-packages]
+pytest = "*"

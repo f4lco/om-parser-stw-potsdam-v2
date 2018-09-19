@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openmensa version="2.1" xmlns="http://openmensa.org/open-mensa-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  <canteen>
+    <name>Mensa Griebnitzsee</name>
+    <address>August-Bebel-Straße 69, Haus 6</address>
+    <city>14482 Potsdam</city>
+    <day date="2018-09-19">
+      <category name="Angebot 1">
+        <meal>
+          <name>Gefüllter Germknödel 
+mit Vanillesauce und Mohnzucker</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Gebratene Rindfleischstreifen mit  Gemüse und Kidneybohnen-Dip, dazu Pommes frites</name>
+          <note>Rindfleisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Fangfrisches Seelachsfilet auf Farfalle mit Kirschtomaten, Rucola , dazu Salat</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Bunte Gemüsepfanne dazu Bulgur und Blattsalatvariation</name>
+          <note>Knoblauch</note>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-20">
+      <category name="Angebot 1">
+        <meal>
+          <name>Eierfrikassee mit buntem Gemüse, dazu Kartoffelpüree</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Schweinsbraten mit süßem Senf und Bratkartoffeln oder bayrischer Kartoffelsalat, dazu Blattsalat</name>
+          <note>Schweinefleisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Truthahnsteak Strindberg Art aus Mecklenburg  mit jungen Erbsen 
+und Grillkartoffeln oder frischen Eierknöpfle</name>
+          <note>Gefluegel</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Falafelbällchen mit Tomatenreis und Ajvar-Dip, dazu Salatvariation mit Oliven</name>
+          <note>Knoblauch</note>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-21">
+      <category name="Angebot 1">
+        <meal>
+          <name>Spaghetti Bolognese mit Reibekäse</name>
+          <note>Schweinefleisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+        <meal>
+          <name>Spaghetti mit veganer Tomatensauce mit geschrotetem Buchweizen</name>
+          <note>Vegan</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Burger mit Putenfleisch aus Mecklenburg mit Pommes frites</name>
+          <note>Gefluegel</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Forelle Müllerin Art mit Petersilienkartoffeln und Gurkensalat</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Kartoffelrösti mit Tomaten und Mozzarella überbacken, dazu Wildkräutersalat</name>
+          <note>Knoblauch</note>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-24">
+      <category name="Angebot 1">
+        <meal>
+          <name>Backkartoffel mit Kräuterquark</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+        <meal>
+          <name>Backkartoffel mit Soja-Kräuterdip</name>
+          <note>Knoblauch</note>
+          <note>Vegan</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Putenbratwurst aus Mecklenburg mit hausgemachter Currysauce, dazu Kartoffel-Gurkensalat</name>
+          <note>Gefluegel</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+        <meal>
+          <name>Vegetarische Bratwurst mit hausgemachter Currysauce, dazu Kartoffel-Gurkensalat</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Knusperfisch mit Kräutersauce, 
+dazu Saisongemüse und Wildmischreis 
+oder Herzoginkartoffeln</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Pan Haggerty - mit Cheddar überbackenes Kartoffelgericht, dazu Sellerie-Apfelsalat</name>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-25">
+      <category name="Angebot 1">
+        <meal>
+          <name>Rührei mit Rahmspinat und Salzkartoffeln</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Hirtenrolle  mit Balkangemüse, dazu bunter Nudelreis-Salat</name>
+          <note>Knoblauch</note>
+          <note>Schweinefleisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+        <meal>
+          <name>Vegetarische Bratwurst mit hausgemachter Currysauce, dazu  Kartoffel-Gurkensalat</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Fangfrisches Seelachsfilet mit Rahm-Wirsing, dazu Gnocchi oder Langkornreis</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-26">
+      <category name="Angebot 1">
+        <meal>
+          <name>Gebratene Jagdwurst mit Nudeln und Tomatensauce</name>
+          <note>Schweinefleisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+        <meal>
+          <name>Tofusteak mit Nudeln und veganer Tomatensauce</name>
+          <note>Vegan</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Geflügelfrikassee mit jungen Erbsen, dazu Langkornreis oder Salzkartoffeln</name>
+          <note>Alkohol</note>
+          <note>Gefluegel</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Rinder- oder Schweinesteak mit Kräuterbutter und Pfefferbohnen, dazu Pommes frites oder gebratene Drillinge</name>
+          <note>Rindfleisch</note>
+          <note>Schweinefleisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Beelitzer Dinkel-Nudeln und  Tomaten-Sauce mit körnigem Frischkäse, dazu Wildkräutersalat</name>
+          <note>Knoblauch</note>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-27">
+      <category name="Angebot 1">
+        <meal>
+          <name>Kartoffelsuppe mit Wiener Würstchen oder Geflügelwiener aus Mecklenburg, dazu Roggenbrot</name>
+          <note>Rindfleisch</note>
+          <note>Schweinefleisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+        <meal>
+          <name>vegane Kartoffelsuppe mit Räuchertofu und Roggenbrot</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Thaicurry mit Hähnchenfleisch, Paprika und Sprossen, dazu Basmatirei</name>
+          <note>Gefluegel</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Dönerteller mit Kräuter-Sauce, dazu Pommes frites oder Fladenbrot</name>
+          <note>Rindfleisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Makkaroni-Tomaten-Brokkoli-Auflauf, dazu italienische Salatmischung</name>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2018-09-28">
+      <category name="Angebot 1">
+        <meal>
+          <name>Hausgemachte Eierkuchen 
+mit Zitronen-Vanillequark oder Apfelmus</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.40</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Rauch-Matjestopf 
+mit Preiselbeeren, dazu Bratkartoffeln 
+und Gurkensalat mit Sauerrahm</name>
+          <note>Fisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.00</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Paniertes Schnitzel mit Blumenkohl in Semmelbutter, dazu Petersilienkartoffeln</name>
+          <note>Schweinefleisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Gemüsebratling mit Pesto und buntem Gemüse-Nudelsalat</name>
+          <note>Knoblauch</note>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.50</price>
+        </meal>
+      </category>
+    </day>
+  </canteen>
+</openmensa>
