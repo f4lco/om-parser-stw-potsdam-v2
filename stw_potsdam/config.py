@@ -3,8 +3,12 @@
 import ConfigParser
 import io
 import os
+
+from collections import namedtuple
 from functools import partial
-from stw_potsdam.canteen import Canteen
+
+Canteen = namedtuple('Canteen',
+                     ('key', 'name', 'street', 'city', 'id', 'chash'))
 
 
 def _get_config(filename):
@@ -26,5 +30,9 @@ def _parse_canteen(config, canteen_name):
 
 
 def read_canteen_config():
+    """Read the configured canteens from file.
+
+    :return: dictionary which maps from canteen short name to :class:`Canteen`.
+    """
     config = _get_config('canteens.ini')
     return {name: _parse_canteen(config, name) for name in config.sections()}

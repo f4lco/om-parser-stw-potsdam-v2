@@ -51,6 +51,11 @@ def _process_day(builder, day):
 
 
 def render_menu(menu):
+    """Render the menu for a canteen into an OpenMensa XML feed.
+
+    :param dict menu: the Python representation of the API JSON response
+    :return: the XML feed as string
+    """
     builder = LazyBuilder()
 
     for day in _active_days(menu):
@@ -60,6 +65,11 @@ def render_menu(menu):
 
 
 def render_meta(canteen, menu_feed_url):
+    """Render a OpenMensa XML meta feed for a given canteen.
+
+    :param Canteen canteen: the canteen
+    :return: the XML meta feed as string
+    """
     builder = LazyBuilder()
 
     builder.name = canteen.name

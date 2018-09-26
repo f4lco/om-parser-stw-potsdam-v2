@@ -11,11 +11,19 @@ URL = 'https://www.studentenwerk-potsdam.de' + \
 
 
 def _param_json(to_serialize):
-    """Obtain JSON string of an object without whitespace on delimiters."""
+    """Obtain JSON string of an object without whitespace on delimiters.
+
+    :param dict it: The data structure to serialize
+    :return: JSON string, no whitespace between separators
+    """
     return json.dumps(to_serialize, separators=(',', ':'))
 
 
 def download_menu(menu_params):
+    """Download the menu for a specific canteen.
+
+    :param MenuParams menu_params: the target canteen
+    """
     context = {
         'record': 'pages_66',
         'path': 'tt_content.list.20.ddfmensa_ddfmensajson'
