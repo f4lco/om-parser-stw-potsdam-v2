@@ -37,7 +37,7 @@ RUN make test
 
 FROM python:2.7-alpine
 
-RUN apk add uwsgi uwsgi-python
+RUN apk add --no-cache uwsgi uwsgi-python
 RUN pip install pipenv
 RUN adduser -D flaskd
 
