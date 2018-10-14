@@ -83,7 +83,7 @@ def render_meta(canteen, menu):
 
 def render_index(config):
     index = dict(
-        (key, reverse("canteens/{}".format(key))) for key in config
+        (key, reverse("canteens/{}/meta".format(key))) for key in config
     )
 
     index_json = json.dumps(index)

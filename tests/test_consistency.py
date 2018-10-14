@@ -63,7 +63,7 @@ def test_index_consistency():
     }
 
     expectation = {
-        u"test_canteen": u"canteens/test_canteen"
+        u"test_canteen": u"canteens/test_canteen/meta"
     }
 
     result = json.loads(feed.render_index(test_config))
