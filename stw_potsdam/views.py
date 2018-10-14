@@ -10,6 +10,7 @@ from canteen_api import MenuParams, download_menu
 CACHE_TIMEOUT = 45 * 60
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 cache = SimpleCache()
 
@@ -54,6 +55,7 @@ def canteen_meta_feed_xml(canteen, menu):
 
 
 @app.route('/canteens/<canteen_name>')
+@app.route('/canteens/<canteen_name>/meta')
 def canteen_meta_feed(canteen_name):
     config = read_canteen_config()
 
@@ -77,6 +79,7 @@ def canteen_menu_feed(canteen_name):
     return canteen_menu_feed_xml(canteen, menu)
 
 
+@app.route('/')
 @app.route('/canteens')
 def canteen_index():
     config = read_canteen_config()
