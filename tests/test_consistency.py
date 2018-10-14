@@ -41,7 +41,6 @@ def test_meta_consistency():
     assert expected == actual
 
 
-
 def test_menu_consistency():
     canteen = _canteen()
     menu = _menu()
