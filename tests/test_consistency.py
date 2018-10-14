@@ -50,3 +50,23 @@ def test_menu_consistency():
 
     expected = _expected_menu_feed()
     assert expected == actual
+
+
+def test_index_consistency():
+    test_config = {
+        "test_canteen": {
+            u"name": u"Test-Kantine",
+            u"street": u"Musterweg 11a",
+            u"city": u"Testdam",
+            u"id": -1,
+            u"cHash": None,
+        }
+    }
+
+    expectation = {
+        u"test_canteen": u"canteens/test_canteen"
+    }
+
+    result = json.loads(feed.render_index(test_config))
+
+    assert result == expectation

@@ -77,15 +77,13 @@ def canteen_menu_feed(canteen_name):
     return canteen_menu_feed_xml(canteen, menu)
 
 
-# @app.route('/canteens')
-# def canteen_feed(canteen_name):
-    # config = read_canteen_config()
+@app.route('/canteens')
+def canteen_index():
+    config = read_canteen_config()
 
-    # if canteen_name not in config:
-        # return canteen_not_found(config, canteen_name)
+    index_json = feed.render_index(config)
 
-    # canteen = config[canteen_name]
-    # menu = get_menu_cached(canteen)
-    # return canteen_feed_xml(canteen, menu)
-    
-    
+    response = make_response(index_json)
+    response.mimetype = 'application/json'
+    return response
+
