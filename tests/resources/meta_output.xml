@@ -4,5 +4,9 @@
     <name>Mensa Griebnitzsee</name>
     <address>August-Bebel-Straße 69, Haus 6</address>
     <city>14482 Potsdam</city>
+    <feed name="full" priority="0">
+      <schedule dayOfMonth="*" dayOfWeek="*" hour="8-18" minute="0" retry="30 1"/>
+      <url>canteens/griebnitzsee/menu</url>
+    </feed>
   </canteen>
 </openmensa>

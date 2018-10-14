@@ -2,6 +2,8 @@
 
 from pyopenmensa.feed import LazyBuilder
 
+from reverse import reverse
+
 PRICE_ROLE_MAPPING = {
     'student': 'preis_s',
     'other': 'preis_g',
@@ -70,5 +72,8 @@ def render_menu(canteen, menu):
 
 def render_meta(canteen, menu):
     builder = _create_builder(canteen, skip_meta=False)
+
+    menu_feed_url = reverse("canteens/{}/menu".format(canteen.key))
+    builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
 
     return builder.toXMLFeed()
