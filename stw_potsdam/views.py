@@ -37,15 +37,24 @@ def get_menu(canteen, params):
     return menu
 
 
-def canteen_feed_xml(canteen, menu):
-    xml = feed.render(canteen, menu)
+def _canteen_feed_xml(xml):
     response = make_response(xml)
     response.mimetype = 'text/xml'
     return response
 
 
-@app.route('/canteen/<canteen_name>')
-def canteen_feed(canteen_name):
+def canteen_menu_feed_xml(canteen, menu):
+    xml = feed.render_menu(canteen, menu)
+    return _canteen_feed_xml(xml)
+
+
+def canteen_meta_feed_xml(canteen, menu):
+    xml = feed.render_meta(canteen, menu)
+    return _canteen_feed_xml(xml)
+
+
+@app.route('/canteens/<canteen_name>')
+def canteen_meta_feed(canteen_name):
     config = read_canteen_config()
 
     if canteen_name not in config:
@@ -53,4 +62,30 @@ def canteen_feed(canteen_name):
 
     canteen = config[canteen_name]
     menu = get_menu_cached(canteen)
-    return canteen_feed_xml(canteen, menu)
+    return canteen_meta_feed_xml(canteen, menu)
+
+
+@app.route('/canteens/<canteen_name>/menu')
+def canteen_menu_feed(canteen_name):
+    config = read_canteen_config()
+
+    if canteen_name not in config:
+        return canteen_not_found(config, canteen_name)
+
+    canteen = config[canteen_name]
+    menu = get_menu_cached(canteen)
+    return canteen_menu_feed_xml(canteen, menu)
+
+
+# @app.route('/canteens')
+# def canteen_feed(canteen_name):
+    # config = read_canteen_config()
+
+    # if canteen_name not in config:
+        # return canteen_not_found(config, canteen_name)
+
+    # canteen = config[canteen_name]
+    # menu = get_menu_cached(canteen)
+    # return canteen_feed_xml(canteen, menu)
+    
+    

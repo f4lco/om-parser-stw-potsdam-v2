@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openmensa version="2.1" xmlns="http://openmensa.org/open-mensa-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
   <canteen>
-    <name>Mensa Griebnitzsee</name>
-    <address>August-Bebel-Straße 69, Haus 6</address>
-    <city>14482 Potsdam</city>
     <day date="2018-09-19">
       <category name="Angebot 1">
         <meal>
