@@ -27,4 +27,5 @@ requires_online_api = pytest.mark.skipif(
 @requires_online_api
 def test_retrieval(canteen):
     menu = download_menu(MenuParams(canteen_id=canteen.id, chash=canteen.chash))
+    feed.render_meta(canteen, menu)
     feed.render_menu(canteen, menu)
