@@ -1,0 +1,4 @@
+/* Make the headlines for class and function documentation span the entire width */
+.rst-content dl.class dt, .rst-content dl.function dt {
+    width: 100%;
+}

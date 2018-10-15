@@ -68,6 +68,7 @@ def render_meta(canteen, menu_feed_url):
     """Render a OpenMensa XML meta feed for a given canteen.
 
     :param Canteen canteen: the canteen
+    :param menu_feed_url: the canteen menu URL
     :return: the XML meta feed as string
     """
     builder = LazyBuilder()
