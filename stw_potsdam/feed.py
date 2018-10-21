@@ -79,13 +79,3 @@ def render_meta(canteen, menu):
     builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
 
     return builder.toXMLFeed()
-
-
-def render_index(config):
-    index = dict(
-        (key, reverse("canteens/{}/meta".format(key))) for key in config
-    )
-
-    index_json = json.dumps(index)
-
-    return index_json

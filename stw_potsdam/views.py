@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-from flask import Flask, make_response
+from flask import Flask, jsonify, make_response, url_for
 from werkzeug.contrib.cache import SimpleCache
 
 import feed
@@ -83,10 +83,4 @@ def canteen_menu_feed(canteen_name):
 @app.route('/canteens')
 def canteen_index():
     config = read_canteen_config()
-
-    index_json = feed.render_index(config)
-
-    response = make_response(index_json)
-    response.mimetype = 'application/json'
-    return response
-
+    return jsonify({key: url_for('canteen_meta_feed', canteen_name=key, _external=True) for key in config})
