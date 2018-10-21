@@ -52,19 +52,8 @@ def _process_day(builder, day):
                         roles=None)
 
 
-def _create_builder(canteen, skip_meta=False):
-    builder = LazyBuilder()
-
-    if skip_meta is not True:
-        builder.name = canteen.name
-        builder.address = canteen.street
-        builder.city = canteen.city
-
-    return builder
-
-
 def render_menu(canteen, menu):
-    builder = _create_builder(canteen, skip_meta=True)
+    builder = LazyBuilder()
 
     for day in _active_days(menu):
         _process_day(builder, day)
@@ -72,8 +61,12 @@ def render_menu(canteen, menu):
     return builder.toXMLFeed()
 
 
-def render_meta(canteen, menu):
-    builder = _create_builder(canteen, skip_meta=False)
+def render_meta(canteen):
+    builder = LazyBuilder()
+
+    builder.name = canteen.name
+    builder.address = canteen.street
+    builder.city = canteen.city
 
     menu_feed_url = reverse("canteens/{}/menu".format(canteen.key))
     builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
