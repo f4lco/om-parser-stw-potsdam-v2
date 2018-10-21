@@ -1,5 +1,8 @@
+ARG DEPLOY_DIR=/opt/om-parser-stw-potsdam-v2
+
 # Build & test container
 FROM python:2.7-alpine as buildsys
+ARG DEPLOY_DIR
 
 # Install required dependencies
 RUN apk add make
@@ -9,8 +12,8 @@ RUN pip install pipenv
 RUN adduser -D flaskd
 
 # Create app folder
-RUN mkdir -p /opt/om-parser-stw-potsdam-v2
-WORKDIR /opt/om-parser-stw-potsdam-v2
+RUN mkdir -p ${DEPLOY_DIR}
+WORKDIR ${DEPLOY_DIR}
 
 # Copy app folder contents
 COPY stw_potsdam/ ./stw_potsdam
@@ -37,14 +40,15 @@ RUN make test
 
 FROM python:2.7-alpine
 
+ARG DEPLOY_DIR
+
 RUN apk add --no-cache uwsgi uwsgi-python
 RUN pip install pipenv
 RUN adduser -D flaskd
 
-RUN mkdir -p /opt/om-parser-stw-potsdam-v2
-COPY --from=buildsys /opt/om-parser-stw-potsdam-v2 /opt/om-parser-stw-potsdam-v2
+COPY --from=buildsys ${DEPLOY_DIR} ${DEPLOY_DIR}
 
-WORKDIR /opt/om-parser-stw-potsdam-v2
+WORKDIR ${DEPLOY_DIR}
 RUN chown -R flaskd:flaskd .
 
 USER flaskd
