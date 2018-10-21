@@ -96,3 +96,8 @@ def canteen_menu_feed(canteen_name):
 def canteen_index():
     config = read_canteen_config()
     return jsonify({key: url_for('canteen_meta_feed', canteen_name=key, _external=True) for key in config})
+
+
+@app.route('/health_check')
+def health_check():
+    return make_response("OK", 200)
