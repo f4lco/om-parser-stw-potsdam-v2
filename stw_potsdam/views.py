@@ -18,13 +18,10 @@ app.url_map.strict_slashes = False
 if 'BASE_URL' in os.environ:
     base_url = urlparse.urlparse(os.environ.get('BASE_URL'))
     if base_url.scheme:
-        print("Setting PREFERRED_URL_SCHEME to {}".format(base_url.scheme))
         app.config['PREFERRED_URL_SCHEME'] = base_url.scheme
     if base_url.netloc:
-        print("Setting SERVER_NAME to {}".format(base_url.netloc))
         app.config['SERVER_NAME'] = base_url.netloc
     if base_url.path:
-        print("Setting APPLICATION_ROOT to {}".format(base_url.path))
         app.config['APPLICATION_ROOT'] = base_url.path
 
 cache = SimpleCache()
