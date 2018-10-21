@@ -4,7 +4,6 @@ import json
 
 from pyopenmensa.feed import LazyBuilder
 
-from reverse import reverse
 
 PRICE_ROLE_MAPPING = {
     'student': 'preis_s',
