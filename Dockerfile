@@ -27,7 +27,6 @@ RUN chown -R flaskd:flaskd .
 
 # Prepare environment
 USER flaskd
-ENV PYTHONPATH="/opt/om-parser-stw-potsdam-v2:${PYTHONPATH}"
 
 # Install environment
 RUN pipenv install --two --dev
@@ -52,7 +51,6 @@ WORKDIR ${DEPLOY_DIR}
 RUN chown -R flaskd:flaskd .
 
 USER flaskd
-ENV PYTHONPATH="/opt/om-parser-stw-potsdam-v2:${PYTHONPATH}"
 
 ENV PIPENV_VENV_IN_PROJECT=1
 RUN pipenv install --two --deploy
