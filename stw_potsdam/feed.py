@@ -1,7 +1,5 @@
 # -*- encoding: utf-8 -*-
 
-import json
-
 from pyopenmensa.feed import LazyBuilder
 
 
