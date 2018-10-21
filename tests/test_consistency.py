@@ -45,7 +45,7 @@ def test_menu_consistency():
     canteen = _canteen()
     menu = _menu()
 
-    actual = feed.render_menu(canteen, menu)
+    actual = feed.render_menu(menu)
 
     expected = _expected_menu_feed()
     assert expected == actual

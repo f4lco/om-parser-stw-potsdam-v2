@@ -49,7 +49,7 @@ def _process_day(builder, day):
                         roles=None)
 
 
-def render_menu(canteen, menu):
+def render_menu(menu):
     builder = LazyBuilder()
 
     for day in _active_days(menu):
