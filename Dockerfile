@@ -53,6 +53,7 @@ RUN adduser -D flaskd
 COPY --from=buildsys ${DEPLOY_DIR} ${DEPLOY_DIR}
 
 WORKDIR ${DEPLOY_DIR}
+RUN rm -rf ./tests ./Makefile
 RUN chown -R flaskd:flaskd .
 
 USER flaskd
