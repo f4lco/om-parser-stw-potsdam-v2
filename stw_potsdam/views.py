@@ -54,3 +54,7 @@ def canteen_feed(canteen_name):
     canteen = config[canteen_name]
     menu = get_menu_cached(canteen)
     return canteen_feed_xml(canteen, menu)
+
+@app.route('/health_check')
+def health_check():
+    return make_response("OK", 200)

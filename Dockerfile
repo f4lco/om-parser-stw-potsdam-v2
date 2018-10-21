@@ -46,7 +46,7 @@ ARG LISTEN_PORT
 ENV LISTEN_PORT=$LISTEN_PORT
 ENV LISTEN=0.0.0.0:$LISTEN_PORT
 
-RUN apk add --no-cache uwsgi uwsgi-python
+RUN apk add --no-cache uwsgi uwsgi-python curl
 RUN pip install pipenv
 RUN adduser -D flaskd
 
@@ -63,3 +63,5 @@ RUN pipenv install --two --deploy
 
 EXPOSE $LISTEN_PORT
 CMD pipenv run uwsgi --master --http11-socket $LISTEN --plugins python --protocol uwsgi --wsgi stw_potsdam.views:app --virtualenv ./.venv
+
+HEALTHCHECK --interval=15s --timeout=3s CMD curl -f http://127.0.0.1:$LISTEN_PORT/health_check || exit 1
