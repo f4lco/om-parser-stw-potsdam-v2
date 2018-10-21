@@ -65,7 +65,8 @@ def canteen_menu_feed_xml(menu):
 
 
 def canteen_meta_feed_xml(canteen):
-    xml = feed.render_meta(canteen)
+    menu_feed_url = url_for('canteen_menu_feed', canteen_name=canteen.key, _external=True)
+    xml = feed.render_meta(canteen, menu_feed_url)
     return _canteen_feed_xml(xml)
 
 

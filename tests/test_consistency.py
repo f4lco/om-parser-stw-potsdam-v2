@@ -34,8 +34,9 @@ def _expected_menu_feed():
 def test_meta_consistency():
     canteen = _canteen()
     menu = _menu()
+    menu_feed_url = "canteens/{}/menu".format(canteen.key)
 
-    actual = feed.render_meta(canteen, menu)
+    actual = feed.render_meta(canteen, menu_feed_url)
 
     expected = _expected_meta_feed()
     assert expected == actual

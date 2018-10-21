@@ -58,14 +58,13 @@ def render_menu(menu):
     return builder.toXMLFeed()
 
 
-def render_meta(canteen):
+def render_meta(canteen, menu_feed_url):
     builder = LazyBuilder()
 
     builder.name = canteen.name
     builder.address = canteen.street
     builder.city = canteen.city
 
-    menu_feed_url = reverse("canteens/{}/menu".format(canteen.key))
     builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
 
     return builder.toXMLFeed()
