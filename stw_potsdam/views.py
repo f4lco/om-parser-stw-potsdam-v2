@@ -49,8 +49,8 @@ def canteen_menu_feed_xml(canteen, menu):
     return _canteen_feed_xml(xml)
 
 
-def canteen_meta_feed_xml(canteen, menu):
-    xml = feed.render_meta(canteen, menu)
+def canteen_meta_feed_xml(canteen):
+    xml = feed.render_meta(canteen)
     return _canteen_feed_xml(xml)
 
 
@@ -63,8 +63,7 @@ def canteen_meta_feed(canteen_name):
         return canteen_not_found(config, canteen_name)
 
     canteen = config[canteen_name]
-    menu = get_menu_cached(canteen)
-    return canteen_meta_feed_xml(canteen, menu)
+    return canteen_meta_feed_xml(canteen)
 
 
 @app.route('/canteens/<canteen_name>/menu')
