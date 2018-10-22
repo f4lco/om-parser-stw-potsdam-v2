@@ -2,6 +2,7 @@
 
 from pyopenmensa.feed import LazyBuilder
 
+
 PRICE_ROLE_MAPPING = {
     'student': 'preis_s',
     'other': 'preis_g',
@@ -48,18 +49,22 @@ def _process_day(builder, day):
                         roles=None)
 
 
-def _create_builder(canteen):
+def render_menu(menu):
     builder = LazyBuilder()
-    builder.name = canteen.name
-    builder.address = canteen.street
-    builder.city = canteen.city
-    return builder
-
-
-def render(canteen, menu):
-    builder = _create_builder(canteen)
 
     for day in _active_days(menu):
         _process_day(builder, day)
+
+    return builder.toXMLFeed()
+
+
+def render_meta(canteen, menu_feed_url):
+    builder = LazyBuilder()
+
+    builder.name = canteen.name
+    builder.address = canteen.street
+    builder.city = canteen.city
+
+    builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
 
     return builder.toXMLFeed()

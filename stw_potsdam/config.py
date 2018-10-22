@@ -17,7 +17,8 @@ def _get_config(filename):
 
 def _parse_canteen(config, canteen_name):
     get = partial(config.get, canteen_name)
-    return Canteen(name=get('name'),
+    return Canteen(key=canteen_name,
+                   name=get('name'),
                    street=get('street'),
                    city=get('city'),
                    id=get('id'),

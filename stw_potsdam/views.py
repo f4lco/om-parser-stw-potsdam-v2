@@ -1,6 +1,9 @@
 # -*- encoding: utf-8 -*-
 
-from flask import Flask, make_response
+import os
+import urlparse
+
+from flask import Flask, jsonify, make_response, url_for
 from werkzeug.contrib.cache import SimpleCache
 
 import feed
@@ -10,6 +13,16 @@ from canteen_api import MenuParams, download_menu
 CACHE_TIMEOUT = 45 * 60
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
+
+if 'BASE_URL' in os.environ:
+    base_url = urlparse.urlparse(os.environ.get('BASE_URL'))
+    if base_url.scheme:
+        app.config['PREFERRED_URL_SCHEME'] = base_url.scheme
+    if base_url.netloc:
+        app.config['SERVER_NAME'] = base_url.netloc
+    if base_url.path:
+        app.config['APPLICATION_ROOT'] = base_url.path
 
 cache = SimpleCache()
 
@@ -37,15 +50,37 @@ def get_menu(canteen, params):
     return menu
 
 
-def canteen_feed_xml(canteen, menu):
-    xml = feed.render(canteen, menu)
+def _canteen_feed_xml(xml):
     response = make_response(xml)
     response.mimetype = 'text/xml'
     return response
 
 
-@app.route('/canteen/<canteen_name>')
-def canteen_feed(canteen_name):
+def canteen_menu_feed_xml(menu):
+    xml = feed.render_menu(menu)
+    return _canteen_feed_xml(xml)
+
+
+def canteen_meta_feed_xml(canteen):
+    menu_feed_url = url_for('canteen_menu_feed', canteen_name=canteen.key, _external=True)
+    xml = feed.render_meta(canteen, menu_feed_url)
+    return _canteen_feed_xml(xml)
+
+
+@app.route('/canteens/<canteen_name>')
+@app.route('/canteens/<canteen_name>/meta')
+def canteen_meta_feed(canteen_name):
+    config = read_canteen_config()
+
+    if canteen_name not in config:
+        return canteen_not_found(config, canteen_name)
+
+    canteen = config[canteen_name]
+    return canteen_meta_feed_xml(canteen)
+
+
+@app.route('/canteens/<canteen_name>/menu')
+def canteen_menu_feed(canteen_name):
     config = read_canteen_config()
 
     if canteen_name not in config:
@@ -53,7 +88,15 @@ def canteen_feed(canteen_name):
 
     canteen = config[canteen_name]
     menu = get_menu_cached(canteen)
-    return canteen_feed_xml(canteen, menu)
+    return canteen_menu_feed_xml(menu)
+
+
+@app.route('/')
+@app.route('/canteens')
+def canteen_index():
+    config = read_canteen_config()
+    return jsonify({key: url_for('canteen_meta_feed', canteen_name=key, _external=True) for key in config})
+
 
 @app.route('/health_check')
 def health_check():

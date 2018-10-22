@@ -21,16 +21,32 @@ def _menu():
         return json.load(f)
 
 
-def _expected_feed():
-    with io.open(_resource_path('output.xml'), encoding='utf-8') as f:
+def _expected_meta_feed():
+    with io.open(_resource_path('meta_output.xml'), encoding='utf-8') as f:
         return f.read()
 
 
-def test_consistency():
+def _expected_menu_feed():
+    with io.open(_resource_path('menu_output.xml'), encoding='utf-8') as f:
+        return f.read()
+
+
+def test_meta_consistency():
+    canteen = _canteen()
+    menu = _menu()
+    menu_feed_url = "canteens/{}/menu".format(canteen.key)
+
+    actual = feed.render_meta(canteen, menu_feed_url)
+
+    expected = _expected_meta_feed()
+    assert expected == actual
+
+
+def test_menu_consistency():
     canteen = _canteen()
     menu = _menu()
 
-    actual = feed.render(canteen, menu)
+    actual = feed.render_menu(menu)
 
-    expected = _expected_feed()
+    expected = _expected_menu_feed()
     assert expected == actual
