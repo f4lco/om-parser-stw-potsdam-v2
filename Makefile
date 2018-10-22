@@ -1,6 +1,9 @@
 
 RUN = pipenv run python -m stw_potsdam
 
+dependencies:
+	pipenv sync
+
 run:
 	$(RUN)
 
