@@ -33,7 +33,6 @@ def _expected_menu_feed():
 
 def test_meta_consistency():
     canteen = _canteen()
-    menu = _menu()
     menu_feed_url = "canteens/{}/menu".format(canteen.key)
 
     actual = feed.render_meta(canteen, menu_feed_url)
@@ -43,7 +42,6 @@ def test_meta_consistency():
 
 
 def test_menu_consistency():
-    canteen = _canteen()
     menu = _menu()
 
     actual = feed.render_menu(menu)
