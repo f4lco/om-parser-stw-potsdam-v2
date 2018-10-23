@@ -1,3 +1,4 @@
 .cache
 .idea
 .pytest_cache
+/.coverage

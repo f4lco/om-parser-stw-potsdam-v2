@@ -5,3 +5,5 @@ flask = "*"
 
 [dev-packages]
 pytest = "*"
+coveralls = "*"
+pytest-cov = "*"
