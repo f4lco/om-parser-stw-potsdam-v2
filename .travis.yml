@@ -8,4 +8,5 @@ install:
 
 script:
   - make test
-  - make coverage
+  - make coverage_publish
+  - make coverage_report
