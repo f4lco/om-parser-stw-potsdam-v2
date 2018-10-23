@@ -18,8 +18,14 @@ def canteen(request):
     return request.param
 
 
+def is_enabled():
+    user_enabled = bool(os.getenv(ENV_ENABLED))
+    travis_enabled = os.getenv('TRAVIS_EVENT_TYPE') == 'cron'
+    return user_enabled or travis_enabled
+
+
 requires_online_api = pytest.mark.skipif(
-    not bool(os.getenv(ENV_ENABLED)),
+    not is_enabled(),
     reason='Querying the online API is disabled. Turn on by setting env variable %s.' % ENV_ENABLED
 )
 
