@@ -33,8 +33,10 @@ def _prices(offer):
 
         price = offer[api_role]
         # When no price is set, this can be empty dict
-        if (isinstance(price, unicode) or isinstance(price, str)) and price.strip():
-            result[role] = str(price)  # Convert unicode to str for PyOpenMensa -> misses type check
+        if (isinstance(price, unicode) or isinstance(price, str)) \
+                and price.strip():
+            # Convert unicode to str for PyOpenMensa -> misses type check
+            result[role] = str(price)
 
     return result
 
@@ -65,6 +67,14 @@ def render_meta(canteen, menu_feed_url):
     builder.address = canteen.street
     builder.city = canteen.city
 
-    builder.define(name="full", priority="0", url=menu_feed_url, source=None, dayOfWeek="*", dayOfMonth="*", hour="8-18", minute="0", retry="30 1")
+    builder.define(name='full',
+                   priority='0',
+                   url=menu_feed_url,
+                   source=None,
+                   dayOfWeek='*',
+                   dayOfMonth='*',
+                   hour='8-18',
+                   minute='0',
+                   retry='30 1')
 
     return builder.toXMLFeed()

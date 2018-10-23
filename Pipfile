@@ -8,3 +8,5 @@ pytest = "*"
 coveralls = "*"
 pytest-cov = "*"
 httpretty = "*"
+pycodestyle = "*"
+

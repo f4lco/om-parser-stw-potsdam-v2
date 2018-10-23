@@ -26,12 +26,14 @@ def is_enabled():
 
 requires_online_api = pytest.mark.skipif(
     not is_enabled(),
-    reason='Querying the online API is disabled. Turn on by setting env variable %s.' % ENV_ENABLED
+    reason='Querying the online API is disabled. '
+           'Turn on by setting env variable %s.' % ENV_ENABLED
 )
 
 
 @requires_online_api
 def test_retrieval(canteen):
     feed.render_meta(canteen, "/canteens/{}/menu".format(canteen.key))
-    menu = download_menu(MenuParams(canteen_id=canteen.id, chash=canteen.chash))
+    params = MenuParams(canteen_id=canteen.id, chash=canteen.chash)
+    menu = download_menu(params)
     feed.render_menu(menu)

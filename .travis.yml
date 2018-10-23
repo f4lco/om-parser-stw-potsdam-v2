@@ -7,6 +7,7 @@ install:
   - make dependencies
 
 script:
+  - make lint
   - make test
   - make coverage_publish
   - make coverage_report

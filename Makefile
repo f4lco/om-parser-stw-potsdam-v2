@@ -22,8 +22,11 @@ coverage_publish:
 coverage_report:
 	pipenv run python -m coverage report --fail-under 90
 
+lint:
+	pipenv run pycodestyle stw_potsdam tests
+
 clean:
 	pipenv run python -m coverage erase
 	rm -rf .pytest_cache .cache
 
-.PHONY: dependencies run debug test test_debug coverage_publish coverage_report clean
+.PHONY: dependencies run debug test test_debug coverage_publish coverage_report lint clean

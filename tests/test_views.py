@@ -24,7 +24,10 @@ def test_index(client):
     assert canteen.status_code == 200, 'Canteen URL is reachable'
 
 
-@pytest.mark.parametrize('url', ['/canteens/spam', '/canteens/spam/meta', '/canteens/spam/menu'])
+@pytest.mark.parametrize('url', [
+    '/canteens/spam',
+    '/canteens/spam/meta',
+    '/canteens/spam/menu'])
 def test_canteen_not_found(client, url):
     response = client.get(url)
     assert response.status_code == 404
@@ -56,8 +59,8 @@ def _request_check_meals(client):
     response = client.get('/canteens/griebnitzsee/menu')
 
     assert response.status_code == 200
-    meals = meal_names(response.data)
-    assert meals[0] == u"Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
+    meal = meal_names(response.data)[0]
+    assert meal == u"Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
 
 
 @pytest.fixture

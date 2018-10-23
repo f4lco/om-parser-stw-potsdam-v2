@@ -6,7 +6,8 @@ from collections import namedtuple
 
 MenuParams = namedtuple('MenuParams', ('canteen_id', 'chash'))
 
-URL = 'https://www.studentenwerk-potsdam.de/essen/unsere-mensen-cafeterien/detailinfos/'
+URL = 'https://www.studentenwerk-potsdam.de' + \
+      '/essen/unsere-mensen-cafeterien/detailinfos/'
 
 
 def _param_json(it):
