@@ -9,4 +9,4 @@ coveralls = "*"
 pytest-cov = "*"
 httpretty = "*"
 pycodestyle = "*"
-
+pydocstyle = "*"

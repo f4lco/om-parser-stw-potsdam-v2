@@ -18,8 +18,9 @@ def api_offline():
 @pytest.fixture
 def api_online_one_shot():
     """Allow a single API request, returning the contents of 'input.json'.
-    Subsequent API invocations will return with HTTP status code 500."""
 
+    Subsequent API invocations will return with HTTP status code 500.
+    """
     def canned_menu(request, uri, response_headers):
         path = os.path.join(os.path.dirname(__file__),
                             'resources', 'input.json')
