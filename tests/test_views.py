@@ -1,12 +1,17 @@
 # -*- encoding: utf-8 -*-
 import pytest
 
-from response_util import meal_names
 from stw_potsdam import views
 
-# noinspection PyUnresolvedReferences
+from tests.response_util import meal_names
 # pytest fixtures are linked via parameter names of test methods
-from stub_api import api_offline, api_online_one_shot
+# pragma pylint: disable=unused-import,redefined-outer-name,unused-argument
+from tests.stub_api import api_offline, api_online_one_shot
+
+# Long test method names are not 'snake case'!
+# See https://github.com/PyCQA/pylint/issues/2047
+# The fix has not been ported to Python 2.x.
+# pylint: disable=invalid-name
 
 
 def test_health_check(client):

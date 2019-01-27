@@ -25,6 +25,7 @@ coverage_report:
 lint:
 	pipenv run pycodestyle stw_potsdam tests
 	pipenv run pydocstyle stw_potsdam tests
+	pipenv run pylint stw_potsdam tests
 
 clean:
 	pipenv run python -m coverage erase

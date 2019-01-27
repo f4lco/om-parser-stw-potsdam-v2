@@ -8,6 +8,8 @@ from stw_potsdam.config import read_canteen_config
 from stw_potsdam.canteen_api import download_menu
 from stw_potsdam.canteen_api import MenuParams
 
+# pragma pylint: disable=invalid-name,redefined-outer-name
+
 ENV_ENABLED = 'ENABLE_API_QUERY'
 
 CANTEENS = read_canteen_config()

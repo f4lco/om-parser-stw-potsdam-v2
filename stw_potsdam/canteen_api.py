@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
 import json
-import requests
 from collections import namedtuple
+import requests
 
 MenuParams = namedtuple('MenuParams', ('canteen_id', 'chash'))
 
@@ -10,8 +10,9 @@ URL = 'https://www.studentenwerk-potsdam.de' + \
       '/essen/unsere-mensen-cafeterien/detailinfos/'
 
 
-def _param_json(it):
-    return json.dumps(it, separators=(',', ':'))
+def _param_json(to_serialize):
+    """Obtain JSON string of an object without whitespace on delimiters."""
+    return json.dumps(to_serialize, separators=(',', ':'))
 
 
 def download_menu(menu_params):

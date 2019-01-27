@@ -4,14 +4,14 @@ import ConfigParser
 import io
 import os
 from functools import partial
-from canteen import Canteen
+from stw_potsdam.canteen import Canteen
 
 
 def _get_config(filename):
     config = ConfigParser.SafeConfigParser()
     path = os.path.join(os.path.dirname(__file__), filename)
-    with io.open(path, encoding='utf-8') as f:
-        config.readfp(f)
+    with io.open(path, encoding='utf-8') as config_file:
+        config.readfp(config_file)
     return config
 
 

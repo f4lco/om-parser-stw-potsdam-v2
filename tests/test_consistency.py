@@ -17,18 +17,18 @@ def _canteen():
 
 
 def _menu():
-    with open(_resource_path('input.json')) as f:
-        return json.load(f)
+    with open(_resource_path('input.json')) as menu_file:
+        return json.load(menu_file)
 
 
 def _expected_meta_feed():
-    with io.open(_resource_path('meta_output.xml'), encoding='utf-8') as f:
-        return f.read()
+    with io.open(_resource_path('meta_output.xml'), encoding='utf-8') as xml:
+        return xml.read()
 
 
 def _expected_menu_feed():
-    with io.open(_resource_path('menu_output.xml'), encoding='utf-8') as f:
-        return f.read()
+    with io.open(_resource_path('menu_output.xml'), encoding='utf-8') as xml:
+        return xml.read()
 
 
 def test_meta_consistency():

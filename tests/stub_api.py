@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-import httpretty
 import os
+import httpretty
 import pytest
 
 from stw_potsdam import canteen_api
@@ -21,11 +21,13 @@ def api_online_one_shot():
 
     Subsequent API invocations will return with HTTP status code 500.
     """
+    # pylint: disable=unused-argument
     def canned_menu(request, uri, response_headers):
         path = os.path.join(os.path.dirname(__file__),
                             'resources', 'input.json')
-        with open(path) as f:
-            return 200, response_headers, f.read()
+
+        with open(path) as api_response:
+            return 200, response_headers, api_response.read()
 
     responses = [
         httpretty.Response(body=canned_menu),

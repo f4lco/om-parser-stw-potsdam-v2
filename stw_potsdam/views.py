@@ -4,16 +4,21 @@ import os
 import urlparse
 
 from flask import Flask, jsonify, make_response, url_for
+from flask.logging import create_logger
 from werkzeug.contrib.cache import SimpleCache
 
-import feed
-from config import read_canteen_config
-from canteen_api import MenuParams, download_menu
+from stw_potsdam import feed
+from stw_potsdam.config import read_canteen_config
+from stw_potsdam.canteen_api import MenuParams, download_menu
 
 CACHE_TIMEOUT = 45 * 60
 
+# pragma pylint: disable=invalid-name
+
 app = Flask(__name__)
 app.url_map.strict_slashes = False
+
+log = create_logger(app)
 
 if 'BASE_URL' in os.environ:  # pragma: no cover
     base_url = urlparse.urlparse(os.environ.get('BASE_URL'))
@@ -28,7 +33,7 @@ cache = SimpleCache()
 
 
 def canteen_not_found(config, canteen_name):
-    app.logger.warn('Canteen %s not found', canteen_name)
+    log.warn('Canteen %s not found', canteen_name)
     configured = ', '.join("'{}'".format(c) for c in config.keys())
     message = "Canteen '{0}' not found, available: {1}".format(canteen_name,
                                                                configured)
@@ -39,12 +44,12 @@ def get_menu_cached(canteen):
     params = MenuParams(canteen_id=canteen.id, chash=canteen.chash)
     menu = cache.get(params)
     if menu:
-        app.logger.info('Using cached menu for %s', canteen)
+        log.info('Using cached menu for %s', canteen)
     return menu or get_menu(canteen, params)
 
 
 def get_menu(canteen, params):
-    app.logger.info('Downloading menu for %s', canteen)
+    log.info('Downloading menu for %s', canteen)
     menu = download_menu(params)
     cache.set(params, menu, timeout=CACHE_TIMEOUT)
     return menu
