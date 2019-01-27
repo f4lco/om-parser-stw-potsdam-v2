@@ -1,5 +1,5 @@
 
-RUN = pipenv run python -m stw_potsdam
+RUN=FLASK_APP="stw_potsdam.views" pipenv run flask run
 
 dependencies:
 	pipenv sync --dev
