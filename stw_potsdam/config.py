@@ -9,7 +9,7 @@ from canteen import Canteen
 
 def _get_config(filename):
     config = ConfigParser.SafeConfigParser()
-    path = os.path.join('stw_potsdam', filename)
+    path = os.path.join(os.path.dirname(__file__), filename)
     with io.open(path, encoding='utf-8') as f:
         config.readfp(f)
     return config

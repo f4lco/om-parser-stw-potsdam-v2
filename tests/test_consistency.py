@@ -9,7 +9,7 @@ from stw_potsdam.config import read_canteen_config
 
 
 def _resource_path(filename):
-    return os.path.join('tests', 'resources', filename)
+    return os.path.join(os.path.dirname(__file__), 'resources', filename)
 
 
 def _canteen():
