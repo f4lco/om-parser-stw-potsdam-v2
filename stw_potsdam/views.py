@@ -15,7 +15,7 @@ CACHE_TIMEOUT = 45 * 60
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-if 'BASE_URL' in os.environ:
+if 'BASE_URL' in os.environ: # pragma: no cover
     base_url = urlparse.urlparse(os.environ.get('BASE_URL'))
     if base_url.scheme:
         app.config['PREFERRED_URL_SCHEME'] = base_url.scheme

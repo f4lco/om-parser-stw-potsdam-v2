@@ -1,0 +1,3 @@
+[run]
+omit =
+  stw_potsdam/__main__.py
