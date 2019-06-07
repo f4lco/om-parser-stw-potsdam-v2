@@ -37,5 +37,12 @@ requires_online_api = pytest.mark.skipif(
 def test_retrieval(canteen):
     feed.render_meta(canteen, "/canteens/{}/menu".format(canteen.key))
     params = MenuParams(canteen_id=canteen.id, chash=canteen.chash)
-    menu = download_menu(params)
+
+    try:
+        menu = download_menu(params)
+    except ValueError as e:
+        if e.message == 'No JSON object could be decoded':
+            pytest.xfail('JSON endpoint returned garbage (issue #6)')
+        raise e
+
     feed.render_menu(menu)
