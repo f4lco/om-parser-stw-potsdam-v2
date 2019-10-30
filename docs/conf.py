@@ -12,6 +12,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+import alabaster
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
@@ -20,7 +21,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = u'OpenMensa Potsdam'
-copyright = u'2018, f4lco'
+copyright = u'2019, f4lco'
 author = u'f4lco'
 
 # The short X.Y version
@@ -30,9 +31,6 @@ release = u'0.1'
 
 
 # -- General configuration ---------------------------------------------------
-
-def setup(app):
-    app.add_stylesheet('css/custom.css')
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -44,6 +42,7 @@ def setup(app):
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.githubpages',
+    'alabaster',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -76,21 +75,31 @@ pygments_style = None
 
 # -- Options for HTML output -------------------------------------------------
 
+html_theme_path = [alabaster.get_path()]
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'github_banner': True,
+    'github_button': False,
+    'github_user': 'f4lco',
+    'github_repo': 'om-parser-stw-potsdam-v2',
+    'travis_button': True,
+}
+
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = []
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -100,7 +109,15 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
