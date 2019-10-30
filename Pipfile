@@ -9,7 +9,7 @@ coveralls = "*"
 pytest-cov = "*"
 httpretty = "*"
 pycodestyle = "*"
-pydocstyle = "*"
+pydocstyle = "==3.0.0" # Py2 support, see https://pypi.org/project/pydocstyle/3.0.0/
 pylint = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
