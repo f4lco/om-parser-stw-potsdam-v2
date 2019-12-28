@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 
+import logging
 import os
 import pytest
 
@@ -11,6 +12,10 @@ from stw_potsdam.canteen_api import MenuParams
 # pragma pylint: disable=invalid-name,redefined-outer-name
 
 ENV_ENABLED = 'ENABLE_API_QUERY'
+
+# Because log messages are automatically part of the Pytest report, below
+# explicitly avoids adding log handlers via logging#basicConfig, for example.
+logging.getLogger().setLevel(logging.DEBUG)
 
 CANTEENS = read_canteen_config()
 

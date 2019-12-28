@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 import json
+import logging
 from collections import namedtuple
 import requests
 
@@ -8,6 +9,8 @@ MenuParams = namedtuple('MenuParams', ('canteen_id', 'chash'))
 
 URL = 'https://www.studentenwerk-potsdam.de' + \
       '/essen/unsere-mensen-cafeterien/detailinfos/'
+
+LOG = logging.getLogger(__name__)
 
 
 def _param_json(to_serialize):
@@ -40,4 +43,9 @@ def download_menu(menu_params):
     }
 
     request = requests.post(URL, params=params, json=body)
+
+    # urllib3 does not log response bodies - requests no longer supports it:
+    # https://2.python-requests.org//en/master/api/#api-changes
+    LOG.debug('Response:\n>>>>>\n%s\n<<<<<', request.text)
+
     return request.json()
