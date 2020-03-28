@@ -16,18 +16,13 @@ def _canteen():
     return read_canteen_config()['griebnitzsee']
 
 
-def _menu():
-    with open(_resource_path('input.json')) as menu_file:
+def _read_menu(resource_name):
+    with open(_resource_path(resource_name)) as menu_file:
         return json.load(menu_file)
 
 
-def _expected_meta_feed():
-    with io.open(_resource_path('meta_output.xml'), encoding='utf-8') as xml:
-        return xml.read()
-
-
-def _expected_menu_feed():
-    with io.open(_resource_path('menu_output.xml'), encoding='utf-8') as xml:
+def _read_feed(resource_name):
+    with io.open(_resource_path(resource_name), encoding='utf-8') as xml:
         return xml.read()
 
 
@@ -37,14 +32,23 @@ def test_meta_consistency():
 
     actual = feed.render_meta(canteen, menu_feed_url)
 
-    expected = _expected_meta_feed()
+    expected = _read_feed('meta_output.xml')
     assert expected == actual
 
 
 def test_menu_consistency():
-    menu = _menu()
+    menu = _read_menu('input.json')
 
     actual = feed.render_menu(menu)
 
-    expected = _expected_menu_feed()
+    expected = _read_feed('menu_output.xml')
+    assert expected == actual
+
+
+def test_empty_menu():
+    menu = _read_menu('empty.json')
+
+    actual = feed.render_menu(menu)
+
+    expected = _read_feed('empty_menu_output.xml')
     assert expected == actual

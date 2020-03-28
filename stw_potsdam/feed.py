@@ -58,8 +58,9 @@ def render_menu(menu):
     """
     builder = LazyBuilder()
 
-    for day in _active_days(menu):
-        _process_day(builder, day)
+    if menu:
+        for day in _active_days(menu):
+            _process_day(builder, day)
 
     return builder.toXMLFeed()
 
