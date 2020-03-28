@@ -11,7 +11,7 @@ debug:
 	FLASK_ENV=development $(RUN)
 
 test:
-	pipenv run python -m pytest -v --cov-branch --cov stw_potsdam --cov-report term --cov-report html
+	pipenv run python -m pytest -vv --cov-branch --cov stw_potsdam --cov-report term --cov-report html
 
 test_debug:
 	pipenv run python -m pytest -v --trace
