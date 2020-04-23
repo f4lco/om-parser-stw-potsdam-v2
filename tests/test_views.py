@@ -17,7 +17,7 @@ from tests.stub_api import api_offline, api_online_one_shot
 def test_health_check(client):
     response = client.get('/health_check')
     assert response.status_code == 200
-    assert response.data == 'OK'
+    assert response.data == b'OK'
 
 
 def test_index(client):
@@ -36,7 +36,7 @@ def test_index(client):
 def test_canteen_not_found(client, url):
     response = client.get(url)
     assert response.status_code == 404
-    assert "Canteen 'spam' not found" in response.data
+    assert b"Canteen 'spam' not found" in response.data
 
 
 @pytest.mark.xfail(strict=True)

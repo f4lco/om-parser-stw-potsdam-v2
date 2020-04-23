@@ -33,9 +33,8 @@ def _prices(offer):
 
         price = offer[api_role]
         # When no price is set, this can be empty dict
-        if isinstance(price, (unicode, str)) and price.strip():
-            # Convert unicode to str for PyOpenMensa -> misses type check
-            result[role] = str(price)
+        if isinstance(price, str) and price.strip():
+            result[role] = price
 
     return result
 
