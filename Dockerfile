@@ -2,7 +2,7 @@ ARG DEPLOY_DIR=/opt/om-parser-stw-potsdam-v2
 ARG LISTEN_PORT=3080
 
 # Build & test container
-FROM python:2.7-alpine as buildsys
+FROM python:3.8-alpine as buildsys
 ARG DEPLOY_DIR
 
 # Install required dependencies
@@ -30,7 +30,7 @@ RUN chown -R flaskd:flaskd .
 USER flaskd
 
 # Install environment
-RUN pipenv install --two --dev
+RUN pipenv install --dev
 
 # Run tests
 RUN make test
@@ -38,7 +38,7 @@ RUN make test
 
 # Executable container
 
-FROM python:2.7-alpine
+FROM python:3.8-alpine
 
 ARG DEPLOY_DIR
 ARG LISTEN_PORT
@@ -59,7 +59,7 @@ RUN chown -R flaskd:flaskd .
 USER flaskd
 
 ENV PIPENV_VENV_IN_PROJECT=1
-RUN pipenv install --two --deploy
+RUN pipenv install --deploy
 
 EXPOSE $LISTEN_PORT
 CMD pipenv run uwsgi --master --http11-socket $LISTEN --plugins python --protocol uwsgi --wsgi stw_potsdam.views:app --virtualenv ./.venv
