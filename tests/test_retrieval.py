@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 
+import json
 import logging
 import os
 import pytest
@@ -45,9 +46,8 @@ def test_retrieval(canteen):
 
     try:
         menu = download_menu(params)
-    except ValueError as e:
-        if e.message == 'No JSON object could be decoded':
-            pytest.xfail('JSON endpoint returned garbage (issue #6)')
-        raise e
+    except json.JSONDecodeError as e:
+        pytest.xfail('JSON endpoint returned garbage (issue #6)')
+        raise e  # Appease PyCharm inspection - xfail always raises
 
     feed.render_menu(menu)
