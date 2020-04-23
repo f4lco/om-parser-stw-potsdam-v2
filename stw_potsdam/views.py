@@ -3,9 +3,10 @@
 import os
 import urllib.parse
 
+import cachetools as ct
+
 from flask import Flask, jsonify, make_response, url_for
 from flask.logging import create_logger
-from werkzeug.contrib.cache import SimpleCache
 
 from stw_potsdam import feed
 from stw_potsdam.config import read_canteen_config
@@ -29,7 +30,7 @@ if 'BASE_URL' in os.environ:  # pragma: no cover
     if base_url.path:
         app.config['APPLICATION_ROOT'] = base_url.path
 
-cache = SimpleCache()
+cache = ct.ttl.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
 
 
 def canteen_not_found(config, canteen_name):
@@ -40,19 +41,15 @@ def canteen_not_found(config, canteen_name):
     return make_response(message, 404)
 
 
-def get_menu_cached(canteen):
-    params = MenuParams(canteen_id=canteen.id, chash=canteen.chash)
-    menu = cache.get(params)
-    if menu:
-        log.info('Using cached menu for %s', canteen)
-    return menu or get_menu(canteen, params)
+def _menu_params(canteen):
+    return MenuParams(canteen_id=canteen.id, chash=canteen.chash)
 
 
-def get_menu(canteen, params):
+@ct.cached(cache=cache, key=_menu_params)
+def get_menu(canteen):
     log.info('Downloading menu for %s', canteen)
-    menu = download_menu(params)
-    cache.set(params, menu, timeout=CACHE_TIMEOUT)
-    return menu
+    params = _menu_params(canteen)
+    return download_menu(params)
 
 
 def _canteen_feed_xml(xml):
@@ -94,7 +91,7 @@ def canteen_menu_feed(canteen_name):
         return canteen_not_found(config, canteen_name)
 
     canteen = config[canteen_name]
-    menu = get_menu_cached(canteen)
+    menu = get_menu(canteen)
     return canteen_menu_feed_xml(menu)
 
 
