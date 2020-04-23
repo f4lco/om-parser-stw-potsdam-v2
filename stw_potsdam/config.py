@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-import ConfigParser
+import configparser
 import io
 import os
 
@@ -12,10 +12,10 @@ Canteen = namedtuple('Canteen',
 
 
 def _get_config(filename):
-    config = ConfigParser.SafeConfigParser()
+    config = configparser.ConfigParser()
     path = os.path.join(os.path.dirname(__file__), filename)
     with io.open(path, encoding='utf-8') as config_file:
-        config.readfp(config_file)
+        config.read_file(config_file)
     return config
 
 

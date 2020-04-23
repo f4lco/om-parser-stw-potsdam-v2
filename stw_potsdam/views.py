@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 import os
-import urlparse
+import urllib.parse
 
 from flask import Flask, jsonify, make_response, url_for
 from flask.logging import create_logger
@@ -21,7 +21,7 @@ app.url_map.strict_slashes = False
 log = create_logger(app)
 
 if 'BASE_URL' in os.environ:  # pragma: no cover
-    base_url = urlparse.urlparse(os.environ.get('BASE_URL'))
+    base_url = urllib.parse.urlparse(os.environ.get('BASE_URL'))
     if base_url.scheme:
         app.config['PREFERRED_URL_SCHEME'] = base_url.scheme
     if base_url.netloc:
@@ -33,7 +33,7 @@ cache = SimpleCache()
 
 
 def canteen_not_found(config, canteen_name):
-    log.warn('Canteen %s not found', canteen_name)
+    log.warning('Canteen %s not found', canteen_name)
     configured = ', '.join("'{}'".format(c) for c in config.keys())
     message = "Canteen '{0}' not found, available: {1}".format(canteen_name,
                                                                configured)
