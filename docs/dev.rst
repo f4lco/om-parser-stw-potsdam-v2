@@ -8,7 +8,7 @@ Quickstart
 
 Use `Pipenv <https://pipenv.readthedocs.io/en/latest/>`_ to setup the environment and start coding: ::
 
-    $ pipenv install --two --dev  # Create venv
+    $ pipenv install --dev        # Create venv
     $ make test                   # Check setup by running tests
     $ make debug                  # Start app instance with debugger and pretty printing of JSON
     $ make run                    # Start app without debugger
