@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openmensa version="2.1" xmlns="http://openmensa.org/open-mensa-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  <canteen>
+    <day date="2020-10-09">
+      <category name="Angebot 1">
+        <meal>
+          <name>Hausgemachte Kartoffelpuffer mit Apfelmus</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Chili con Carne mit Langkornreis
+oder Pommes frites, dazu bunter Salat</name>
+          <note>Rind</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Seelachsfilet in Sesampanade 
+mit pikanter Salsa, dazu gebratene Mini-Kartoffeln oder Langkornreis und Gurkensalat</name>
+          <note>Fisch</note>
+          <note>Knoblauch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Tagessuppe 1,00 €">
+        <meal>
+          <name>t</name>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Currysuppe mit Steckrüben, Bohnen und Paprika</name>
+          <note>Mensavital</note>
+          <note>Vegan</note>
+          <price role="employee">1.00</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Cafeteria Angebot">
+        <meal>
+          <name>Zupfkuchen 1,60 €
+Donuts 1,30 €
+Obstsalat 2,00 €
+Joghurt mit Früchte Müsli und Obst 2,00 € Cookie 1,30
+hausgemachte Waffeln 1,60 €
+Flaguline versch. belegt 3,00 €
+Ciabatta verschieden belegt 2,50 €</name>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-10">
+      <category name="Angebot 4">
+        <meal>
+          <name>f</name>
+          <price role="employee">1.00</price>
+          <price role="other">1.00</price>
+          <price role="student">1.00</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-12">
+      <category name="Angebot 1">
+        <meal>
+          <name>Gekochte Eier in Senfsauce, dazu Kartoffelpüree</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Vegetarische Kohlroulade mit Schmorkohlsauce und Salzkartoffeln</name>
+          <note>Regional</note>
+          <note>Vegetarisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+        <meal>
+          <name>Kohlroulade mit Schmorkohlsauce und Salzkartoffeln</name>
+          <note>Regional</note>
+          <note>Schwein</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Hähnchenbrust mit roter Currysauce, dazu Thai-Gemüse und Duftreis oder Bratnudeln</name>
+          <note>Geflügel</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Limetten-Spaghetti mit Erbsen, Pilzen und Cashewkernen</name>
+          <note>Mensavital</note>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-13">
+      <category name="Angebot 1">
+        <meal>
+          <name>Brühnudeln mit Wurzelgemüse und Sojawürfeln, dazu Brot</name>
+          <note>Vegan</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Sojastreifen in Honig-Senf-Sauce 
+mit Mandel-Kartoffeln, dazu Salatmix
+und Mandarinen-Joghurt-Dressing</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+        <meal>
+          <name>Hähnchenbruststreifen in Honig-Senf-Sauce 
+mit Mandel-Kartoffeln, dazu Salatmix 
+und Mandarinen-Joghurt-Dressing</name>
+          <note>Geflügel</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Wildgulasch mit Rotkohl und Klöße oder Spätzle</name>
+          <note>Alkohol</note>
+          <note>Regional</note>
+          <note>Schwein</note>
+          <note>Wild</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Älpler Maggerone mit Appenzeller Käse überbacken, dazu Apfelmus und Tessiner Mischsalat</name>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-14">
+      <category name="Angebot 1">
+        <meal>
+          <name>Spaghetti mit Florentiner Sauce</name>
+          <note>Knoblauch</note>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Vegetarische Klopse mit Möhrengemüse und Salzkartoffeln oder Langkornreis</name>
+          <note>Regional</note>
+          <note>Vegetarisch</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+        <meal>
+          <name>Königsberger Klopse mit Möhrengemüse und Salzkartoffeln oder Langkornreis</name>
+          <note>Regional</note>
+          <note>Rind</note>
+          <note>Schwein</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Fangfrisches Fischfilet 
+mit Orangen-Pfeffersauce und Fenchel-Tomaten-Gemüse, 
+dazu Kartoffelgnocchi oder Bandnudeln</name>
+          <note>Alkohol</note>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Vegane Frühlingsrolle auf asiatischem Gemüse mit Mango-Chutney und scharfem Kokosreis</name>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-15">
+      <category name="Angebot 1">
+        <meal>
+          <name>Hefeklöße mit Waldbeeren oder Zimtpflaumen</name>
+          <note>Vegetarisch</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Hering nach Hausfrauen Art mit Salzkartoffeln und Salatbeilage</name>
+          <note>Fisch</note>
+          <note>Regional</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Sojasteak mit zerlassener Thymianbutter und Peperonata, dazu Kartoffelgnocchi oder Bratkartoffeln</name>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+        <meal>
+          <name>Schweinesteak mit zerlassener Thymianbutter und Peperonata, dazu Kartoffelgnocchi oder Bratkartoffeln</name>
+          <note>Schwein</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Gelbe Linsen mit Kokos-Curry 
+und Bananen-Soja-Shake</name>
+          <note>Knoblauch</note>
+          <note>Mensavital</note>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2020-10-16">
+      <category name="Angebot 1">
+        <meal>
+          <name>Bunter Gemüseeintopf mit Kichererbsen, dazu Brot</name>
+          <note>Vegan</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+        <meal>
+          <name>Topfwurst mit buntem Sauerkraut und Salzkartoffeln</name>
+          <note>Regional</note>
+          <note>Schwein</note>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 2">
+        <meal>
+          <name>Schweinebraten mit Rosenkohl und Serviettenknödel oder Salzkartoffeln</name>
+          <note>Schwein</note>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Seelachs in Kräuter-Ei-Hülle auf dänischer Senfsauce mit Tricolore-Gemüse und Kartoffelgratin</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 4">
+        <meal>
+          <name>Kartoffel-Kürbiskernrösti 
+mit Tomaten-Schnittlauchquark, dazu Blattsalatvariation</name>
+          <note>Mensavital</note>
+          <note>Vegetarisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+    </day>
+  </canteen>
+</openmensa>

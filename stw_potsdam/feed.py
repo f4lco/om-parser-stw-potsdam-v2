@@ -40,13 +40,30 @@ def _prices(offer):
 
 
 def _process_day(builder, day):
-    for offer in day['angebote']:
+    for offer in _offers(day):
         builder.addMeal(date=day['data'],
                         category=offer['titel'],
                         name=offer['beschreibung'],
                         notes=_notes(offer),
                         prices=_prices(offer),
                         roles=None)
+
+
+def _offers(day):
+    offers = day['angebote']
+    if isinstance(offers, list):
+        return offers
+
+    if isinstance(offers, dict):
+        # allows for the following structure:
+        # {'-1': <garbage>, '0': first_offer, ...}
+        # This case is degenerate and occurs only on semi-regular basis
+        # as of 2020-10-20. The assumption that offers at logical index -1
+        # are garbage can be challenged, it is simply a result of observing
+        # the API responses over several months.
+        return [offer for index, offer in offers.items() if int(index) >= 0]
+
+    raise AssertionError(f'cannot handle offers of type {type(offers)}')
 
 
 def render_menu(menu):

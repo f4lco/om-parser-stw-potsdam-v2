@@ -52,3 +52,13 @@ def test_empty_menu():
 
     expected = _read_feed('empty_menu_output.xml')
     assert expected == actual
+
+
+def test_offers_dictionary():
+    menu = _read_menu('offers-dict.json')
+
+    actual = feed.render_menu(menu)
+
+    expected = _read_feed('offers-dict-output.xml')
+
+    assert expected == actual
