@@ -42,11 +42,18 @@ def _prices(offer):
 def _process_day(builder, day):
     for offer in _offers(day):
         builder.addMeal(date=day['data'],
-                        category=offer['titel'],
+                        category=_category(offer),
                         name=offer['beschreibung'],
                         notes=_notes(offer),
                         prices=_prices(offer),
                         roles=None)
+
+
+def _category(offer):
+    # 'Angebot' is just a placeholder. We cannot tell if 'Angebot' or 'Info' is
+    # more appropriate because offers lacking the 'titel' attribute are real
+    # meals or informational texts.
+    return offer['titel'] or 'Angebot'
 
 
 def _offers(day):

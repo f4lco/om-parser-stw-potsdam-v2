@@ -1,0 +1,2244 @@
+{
+  "globalLaufschrift": "",
+  "wochentage": [
+    {
+      "datum": {
+        "wochentag": "3",
+        "data": "27.01.2021",
+        "freitagsmodus": {
+          "fmwert": "2",
+          "konf": [
+            {
+              "index": "1",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "2",
+              "vonscreen": "1,4",
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "3",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "4",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "5",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": "2",
+                "linksunten": {},
+                "rechtsoben": "5",
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "6",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "7",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "8",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            }
+          ]
+        },
+        "globaleetage": {
+          "icon_eg": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_eg.png",
+          "icon_og": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_og.png",
+          "screenConfs": {
+            "screenog": [
+              "1",
+              "4",
+              "7",
+              "8"
+            ]
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_vegan_w.png"
+          ],
+          "vital": [],
+          "schwein": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_schwein_s.png"
+          ],
+          "fisch": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_fisch_f.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_fisch_f.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_fisch_f.png"
+          ],
+          "rind": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_rind_r.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_rind_r.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_rind_r.png"
+          ],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_knoblauch_k.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_knoblauch_k.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_knoblauch_k.png"
+          ],
+          "regional": []
+        },
+        "angebote": [
+          {
+            "titel": "Angebot 3",
+            "laufschrift": "",
+            "angebotshinweis": "Alle Angebote inklusive einem Frischobst.",
+            "index": "3",
+            "matrix": "5c",
+            "beschreibung": "a",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": "4.50",
+            "preis_g": "4.50",
+            "id": 0,
+            "collapsed": true,
+            "labels": [],
+            "screenid": "3",
+            "tmpvariante": "3.1",
+            "els": {
+              "override": {
+                "active": true,
+                "angebot": "6.0"
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 1,
+                  "angebot": "5"
+                },
+                "linksunten": {
+                  "active": 1,
+                  "angebot": "3.1"
+                },
+                "rechtsunten": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            },
+            "variante": "3.1"
+          },
+          {
+            "titel": "Angebot 3",
+            "laufschrift": null,
+            "angebotshinweis": "Alle Angebote inklusive einem Frischobst.",
+            "index": "3.1",
+            "matrix": "6c",
+            "beschreibung": "Fangfrisches Lachsfilet auf Blattspinat, dazu Grillkartoffeln",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": true,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "D",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "D",
+                    "be": "Fisch",
+                    "ie": "Paella, Bouillabaise, Worchester Sauce, asiatische W\u00fcrzpasten"
+                  }
+                ]
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": "4.50",
+            "preis_g": "4.50",
+            "id": 1,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_fisch_f.png",
+                "name": "Fisch",
+                "translatedfilter": "fisch"
+              }
+            ],
+            "screenid": "3.1",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 1,
+                  "angebot": "5.1"
+                },
+                "linksunten": {
+                  "active": 0
+                },
+                "rechtsunten": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "",
+            "laufschrift": "",
+            "angebotshinweis": "Alle Angebote inklusive einem Frischobst.",
+            "index": "5",
+            "matrix": "5e",
+            "beschreibung": "Linsensuppe mit Wiener W\u00fcrstchen, dazu Brot",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": true,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "2, 3, 4, 8, I, Wei, Rog",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "2",
+                    "be": "mit Konservierungsstoff",
+                    "lbz": "Erhaltung bzw. Verl\u00e4ngerung der Genusstauglichkeit des Lebensmittels."
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "3",
+                    "be": "mit Antioxidationsmittel",
+                    "lbz": "wie (1) und (2)"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "4",
+                    "be": "mit Geschmacksverst\u00e4rker",
+                    "lbz": "zur Verst\u00e4rkung des Geschmacks der wertbestimmenden Zutaten"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "8",
+                    "be": "mit Phosphat",
+                    "lbz": "Bestandteil des Erbgutes aller Lebewesen und ist in Lebensmitteln tierischen Ursprungs enthalten. Phosphatverbindungen werden u.a. als S\u00e4uerungsmittel in Cola, Wurstwaren eingesetzt"
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "I",
+                    "be": "Sellerie",
+                    "ie": "Gew\u00fcrzmischungen, Salatsaucenbasis, Instant-Br\u00fchen, Fleischwaren, Ketchup, Bratlinge"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Rog",
+                    "be": "Roggen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Backwaren"
+                  }
+                ]
+              }
+            },
+            "preis_s": "1.60",
+            "preis_m": {},
+            "preis_g": "3.10",
+            "id": 2,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+                "name": "Schwein",
+                "translatedfilter": "sau"
+              },
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_rind_r.png",
+                "name": "Rind",
+                "translatedfilter": "rind"
+              }
+            ],
+            "screenid": "5,3",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Angebot 1",
+            "laufschrift": "",
+            "angebotshinweis": "Alle Angebote inklusive einem Frischobst.",
+            "index": "6",
+            "matrix": "5f",
+            "beschreibung": "Vegane Fr\u00fchlingsrolle mit Kokos- Currysauce, dazu Wokgem\u00fcse und Langkornreis",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": true,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": true,
+                "vital": false,
+                "flexitarisch": false
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "KNO, 2, C, F, G, I, Wei",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "KNO",
+                    "be": "mit Knoblauch",
+                    "lbz": {
+                      "@attributes": {
+                        "info": "Lebensmitteltechnologische Bedeutung des Zusatzstoffes"
+                      }
+                    }
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "2",
+                    "be": "mit Konservierungsstoff",
+                    "lbz": "Erhaltung bzw. Verl\u00e4ngerung der Genusstauglichkeit des Lebensmittels."
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "C",
+                    "be": "Eier",
+                    "ie": "Mayonnaisen, Remouladen, Teigwaren (Tortellini, Sp\u00e4tzle, Schupfnudeln), Gnocchi, Backwaren, Panaden, gekl\u00e4rte und gebundene Suppen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "F",
+                    "be": "Soja",
+                    "ie": "Milch- und Sahneersatz auf Sojabasis, Tofu, Sojasauce, Zusatzstoff in S\u00fcsswaren v.a. in Schokolade, Wurst- und Fleischwaren"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "G",
+                    "be": "Milch",
+                    "ie": "Backwaren, vegetarische Bratlinge, Wurstwaren, Dressings und W\u00fcrzsaucen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "I",
+                    "be": "Sellerie",
+                    "ie": "Gew\u00fcrzmischungen, Salatsaucenbasis, Instant-Br\u00fchen, Fleischwaren, Ketchup, Bratlinge"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  }
+                ]
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": {},
+            "preis_g": "4.50",
+            "id": 3,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+                "name": "vegan",
+                "translatedfilter": "vegan"
+              },
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_knoblauch_k.png",
+                "name": "Knoblauch",
+                "translatedfilter": "knoblauch"
+              }
+            ],
+            "screenid": "6,3",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Info",
+            "laufschrift": "",
+            "angebotshinweis": "Alle Angebote inklusive einem Frischobst.",
+            "index": "7",
+            "matrix": "5g",
+            "beschreibung": "Die Mensen Am Neuen Palais und Golm bleiben ge\u00f6ffnet.\nSie k\u00f6nnen Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.\nDer Foodhopper in der Kaiser-Friedrich-Stra\u00dfe bietet ausschlie\u00dflich Mittagessen to go an.",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "0.00",
+            "preis_m": "3.90",
+            "preis_g": "0.00",
+            "id": 4,
+            "collapsed": true,
+            "labels": [],
+            "screenid": "7",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "4",
+        "data": "28.01.2021",
+        "freitagsmodus": {
+          "fmwert": "2",
+          "konf": [
+            {
+              "index": "1",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "2",
+              "vonscreen": "1,4",
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "3",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "4",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "5",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": "2",
+                "linksunten": {},
+                "rechtsoben": "5",
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "6",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "7",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "8",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            }
+          ]
+        },
+        "globaleetage": {
+          "icon_eg": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_eg.png",
+          "icon_og": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_og.png",
+          "screenConfs": {
+            "screenog": [
+              "1",
+              "4",
+              "7",
+              "8"
+            ]
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_vegan_w.png"
+          ],
+          "vital": [],
+          "schwein": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_schwein_s.png"
+          ],
+          "fisch": [],
+          "rind": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_rind_r.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_rind_r.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_rind_r.png"
+          ],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_knoblauch_k.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_knoblauch_k.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_knoblauch_k.png"
+          ],
+          "regional": []
+        },
+        "angebote": [
+          {
+            "titel": "Angebot 3",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "3",
+            "matrix": "7c",
+            "beschreibung": "Veganes Sojasteak mit geschmorten Zwiebeln, dazu Bratkartoffeln und Salat",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": true,
+                "vital": false,
+                "flexitarisch": false
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "2, F",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "2",
+                    "be": "mit Konservierungsstoff",
+                    "lbz": "Erhaltung bzw. Verl\u00e4ngerung der Genusstauglichkeit des Lebensmittels."
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "F",
+                    "be": "Soja",
+                    "ie": "Milch- und Sahneersatz auf Sojabasis, Tofu, Sojasauce, Zusatzstoff in S\u00fcsswaren v.a. in Schokolade, Wurst- und Fleischwaren"
+                  }
+                ]
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": "4.50",
+            "preis_g": "4.50",
+            "id": 0,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+                "name": "vegan",
+                "translatedfilter": "vegan"
+              }
+            ],
+            "screenid": "3",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            },
+            "variante": "3.1"
+          },
+          {
+            "titel": "Angebot 3",
+            "laufschrift": null,
+            "angebotshinweis": null,
+            "index": "3.1",
+            "matrix": "8c",
+            "beschreibung": "Schweinenackensteak mit geschmorten Zwiebeln, dazu Bratkartoffeln und Salat",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": true,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": "4.50",
+            "preis_g": "4.50",
+            "id": 1,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+                "name": "Schwein",
+                "translatedfilter": "sau"
+              }
+            ],
+            "screenid": "3.1",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Angebot 1",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "6",
+            "matrix": "7f",
+            "beschreibung": "Nudeln mit Bolognesesauce",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": true,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "KNO, Wei, I",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "KNO",
+                    "be": "mit Knoblauch",
+                    "lbz": {
+                      "@attributes": {
+                        "info": "Lebensmitteltechnologische Bedeutung des Zusatzstoffes"
+                      }
+                    }
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "I",
+                    "be": "Sellerie",
+                    "ie": "Gew\u00fcrzmischungen, Salatsaucenbasis, Instant-Br\u00fchen, Fleischwaren, Ketchup, Bratlinge"
+                  }
+                ]
+              }
+            },
+            "preis_s": "1.60",
+            "preis_m": {},
+            "preis_g": "3.10",
+            "id": 2,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_rind_r.png",
+                "name": "Rind",
+                "translatedfilter": "rind"
+              },
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_knoblauch_k.png",
+                "name": "Knoblauch",
+                "translatedfilter": "knoblauch"
+              }
+            ],
+            "screenid": "6",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Info",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "7",
+            "matrix": "7g",
+            "beschreibung": "Die Mensen Am Neuen Palais und Golm bleiben ge\u00f6ffnet.\nSie k\u00f6nnen Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.\nDer Foodhopper in der Kaiser-Friedrich-Stra\u00dfe bietet ausschlie\u00dflich Mittagessen to go an.",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "0.00",
+            "preis_m": "3.90",
+            "preis_g": "0.00",
+            "id": 3,
+            "collapsed": true,
+            "labels": [],
+            "screenid": "7",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "5",
+        "data": "29.01.2021",
+        "freitagsmodus": {
+          "fmwert": "2",
+          "konf": [
+            {
+              "index": "1",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "2",
+              "vonscreen": "1,4",
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "3",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "4",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "5",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": "2",
+                "linksunten": {},
+                "rechtsoben": "5",
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "6",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "7",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "8",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            }
+          ]
+        },
+        "globaleetage": {
+          "icon_eg": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_eg.png",
+          "icon_og": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_og.png",
+          "screenConfs": {
+            "screenog": [
+              "1",
+              "4",
+              "7",
+              "8"
+            ]
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegetarisch_v.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_vegetarisch_v.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_vegetarisch_v.png"
+          ],
+          "vegan": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_vegan_w.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_vegan_w.png"
+          ],
+          "vital": [],
+          "schwein": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_schwein_s.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_schwein_s.png"
+          ],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_alkohol_a.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_alkohol_a.png",
+            "https:\/\/xml.stw-potsdam.de\/images\/icons\/kl_alkohol_a.png"
+          ],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        },
+        "angebote": [
+          {
+            "titel": "",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "2",
+            "matrix": "9b",
+            "beschreibung": "Die Mensen Am Neuen Palais und Golm bleiben ge\u00f6ffnet.\nSie k\u00f6nnen Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.\nDer Foodhopper in der Kaiser-Friedrich-Stra\u00dfe bietet ausschlie\u00dflich Mittagessen to go an.",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "2.10",
+            "preis_m": "3.90",
+            "preis_g": "3.90",
+            "id": 0,
+            "collapsed": true,
+            "labels": [],
+            "screenid": "2",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Angebot 3",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "3",
+            "matrix": "9c",
+            "beschreibung": "Vegane Gem\u00fcsefrikdelle mit Ajvar-Dip, dazu Bulgur und Salat",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": true,
+                "vital": false,
+                "flexitarisch": false
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "3, 5, I, Wei, L",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "3",
+                    "be": "mit Antioxidationsmittel",
+                    "lbz": "wie (1) und (2)"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "5",
+                    "be": "geschwefelt",
+                    "lbz": "Schwefel dient der Abt\u00f6tung von unerw\u00fcnschten Mikroorganismen"
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "I",
+                    "be": "Sellerie",
+                    "ie": "Gew\u00fcrzmischungen, Salatsaucenbasis, Instant-Br\u00fchen, Fleischwaren, Ketchup, Bratlinge"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "L",
+                    "be": "Schwefeldioxid, Sulfite",
+                    "ie": "Wein, weinhaltige Getr\u00e4nke, getrocknete Fr\u00fcchte, Convenience-Produkte (z.B. Bratkartoffel, Instant-Kartoffelp\u00fcree), Konserven"
+                  }
+                ]
+              }
+            },
+            "preis_s": "2.60",
+            "preis_m": "4.50",
+            "preis_g": "4.50",
+            "id": 1,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegan_w.png",
+                "name": "vegan",
+                "translatedfilter": "vegan"
+              }
+            ],
+            "screenid": "3",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "5",
+            "matrix": "9e",
+            "beschreibung": "Hefekl\u00f6\u00dfe mit hei\u00dfen Fr\u00fcchten",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": true,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": false
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "C, G, Wei",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "C",
+                    "be": "Eier",
+                    "ie": "Mayonnaisen, Remouladen, Teigwaren (Tortellini, Sp\u00e4tzle, Schupfnudeln), Gnocchi, Backwaren, Panaden, gekl\u00e4rte und gebundene Suppen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "G",
+                    "be": "Milch",
+                    "ie": "Backwaren, vegetarische Bratlinge, Wurstwaren, Dressings und W\u00fcrzsaucen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  }
+                ]
+              }
+            },
+            "preis_s": {},
+            "preis_m": {},
+            "preis_g": {},
+            "id": 2,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegetarisch_v.png",
+                "name": "vegetarisch",
+                "translatedfilter": "vegetarisch"
+              }
+            ],
+            "screenid": "5",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            },
+            "variante": "5.1"
+          },
+          {
+            "titel": "",
+            "laufschrift": null,
+            "angebotshinweis": null,
+            "index": "5.1",
+            "matrix": "10e",
+            "beschreibung": "Germkn\u00f6del mit Vanillesauce",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": true,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": true,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": false
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "AL, C, G, Wei",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "AL",
+                    "be": "mit Alkohol",
+                    "lbz": "Aroma-gebende Komponente"
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "C",
+                    "be": "Eier",
+                    "ie": "Mayonnaisen, Remouladen, Teigwaren (Tortellini, Sp\u00e4tzle, Schupfnudeln), Gnocchi, Backwaren, Panaden, gekl\u00e4rte und gebundene Suppen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "G",
+                    "be": "Milch",
+                    "ie": "Backwaren, vegetarische Bratlinge, Wurstwaren, Dressings und W\u00fcrzsaucen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "Wei",
+                    "be": "Weizen-Glutenhaltiges Getreide oder Hybridst\u00e4mme sowie daraus hergestellte Erzeugnisse",
+                    "ie": "Couscous, Bulgur, Saitan, Puddings, Grie\u00dfspeisen, Backwaren, als Bindemittel in Dessertzubereitungen"
+                  }
+                ]
+              }
+            },
+            "preis_s": {},
+            "preis_m": {},
+            "preis_g": {},
+            "id": 3,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_vegetarisch_v.png",
+                "name": "vegetarisch",
+                "translatedfilter": "vegetarisch"
+              },
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_alkohol_a.png",
+                "name": "Alkohol",
+                "translatedfilter": "alkohol"
+              }
+            ],
+            "screenid": "5.1",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          },
+          {
+            "titel": "Angebot 1",
+            "laufschrift": "",
+            "angebotshinweis": null,
+            "index": "6",
+            "matrix": "9f",
+            "beschreibung": "Currywurst mit hausgemachter Sauce, dazu Pommes frites und Salat",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": true,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "8, 21, 3, 4, 9, F, G, J",
+              "additives": {
+                "additive": [
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "8",
+                    "be": "mit Phosphat",
+                    "lbz": "Bestandteil des Erbgutes aller Lebewesen und ist in Lebensmitteln tierischen Ursprungs enthalten. Phosphatverbindungen werden u.a. als S\u00e4uerungsmittel in Cola, Wurstwaren eingesetzt"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "21",
+                    "be": "mit Koffein",
+                    "lbz": "Aroma-gebende Komponente"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "3",
+                    "be": "mit Antioxidationsmittel",
+                    "lbz": "wie (1) und (2)"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "4",
+                    "be": "mit Geschmacksverst\u00e4rker",
+                    "lbz": "zur Verst\u00e4rkung des Geschmacks der wertbestimmenden Zutaten"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Zusatzstoff"
+                    },
+                    "ke": "9",
+                    "be": "mit S\u00fc\u00dfungsmittel",
+                    "lbz": "S\u00fc\u00dfstoffe, liefern kaum Nahrungsenergie und werden deshalb u.a. in energiereduzierten Lebensmitteln eingesetzt"
+                  }
+                ]
+              },
+              "allergens": {
+                "allergen": [
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "F",
+                    "be": "Soja",
+                    "ie": "Milch- und Sahneersatz auf Sojabasis, Tofu, Sojasauce, Zusatzstoff in S\u00fcsswaren v.a. in Schokolade, Wurst- und Fleischwaren"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "G",
+                    "be": "Milch",
+                    "ie": "Backwaren, vegetarische Bratlinge, Wurstwaren, Dressings und W\u00fcrzsaucen"
+                  },
+                  {
+                    "@attributes": {
+                      "info": "Allergen"
+                    },
+                    "ke": "J",
+                    "be": "Senf",
+                    "ie": "Ges\u00e4uerte Gem\u00fcse, Chutneys, Dressings, Wurstwaren, Bratlinge"
+                  }
+                ]
+              }
+            },
+            "preis_s": {},
+            "preis_m": {},
+            "preis_g": {},
+            "id": 4,
+            "collapsed": true,
+            "labels": [
+              {
+                "icon": "https:\/\/xml.stw-potsdam.de\/images\/icons\/su_schwein_s.png",
+                "name": "Schwein",
+                "translatedfilter": "sau"
+              }
+            ],
+            "screenid": "6",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "6",
+        "data": "30.01.2021",
+        "freitagsmodus": {
+          "fmwert": "2",
+          "konf": [
+            {
+              "index": "1",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "2",
+              "vonscreen": "1,4",
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "3",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "4",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "5",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": "2",
+                "linksunten": {},
+                "rechtsoben": "5",
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "6",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "7",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "8",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            }
+          ]
+        },
+        "globaleetage": {
+          "icon_eg": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_eg.png",
+          "icon_og": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_og.png",
+          "screenConfs": {
+            "screenog": [
+              "1",
+              "4",
+              "7",
+              "8"
+            ]
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "7",
+        "data": "31.01.2021",
+        "freitagsmodus": {
+          "fmwert": "2",
+          "konf": [
+            {
+              "index": "1",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "2",
+              "vonscreen": "1,4",
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "3",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "4",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "5",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": "2",
+                "linksunten": {},
+                "rechtsoben": "5",
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "6",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "7",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            },
+            {
+              "index": "8",
+              "vonscreen": {},
+              "angebotemanuell": {
+                "linksoben": {},
+                "linksunten": {},
+                "rechtsoben": {},
+                "rechtsunten": {}
+              }
+            }
+          ]
+        },
+        "globaleetage": {
+          "icon_eg": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_eg.png",
+          "icon_og": "https:\/\/xml.stw-potsdam.de\/images\/icons\/gr_og.png",
+          "screenConfs": {
+            "screenog": [
+              "1",
+              "4",
+              "7",
+              "8"
+            ]
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "1",
+        "data": "01.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        },
+        "angebote": [
+          {
+            "titel": "Info",
+            "laufschrift": null,
+            "angebotshinweis": null,
+            "index": "1",
+            "matrix": "1a",
+            "beschreibung": "Liebe G\u00e4ste! Den Speiseplan der laufenden Woche finden Sie immer montags hier .",
+            "filter": {
+              "zutaten": {
+                "hahn": true,
+                "rind": true,
+                "sau": false,
+                "fisch": false,
+                "alkohol": false,
+                "knoblauch": false,
+                "regional": true,
+                "lamm": false,
+                "vegetarisch": false,
+                "vegan": false,
+                "vital": false,
+                "flexitarisch": true
+              },
+              "date": {
+                "index": 0
+              }
+            },
+            "additivesAllergens": {
+              "string": "",
+              "additives": {
+                "additive": null
+              },
+              "allergens": {
+                "allergen": null
+              }
+            },
+            "preis_s": "1.60",
+            "preis_m": "3.10",
+            "preis_g": "3.10",
+            "id": 0,
+            "collapsed": true,
+            "labels": [],
+            "screenid": "1",
+            "els": {
+              "override": {
+                "active": false
+              },
+              "splitscreen": {
+                "rechtsoben": {
+                  "active": 0
+                }
+              },
+              "speciallabel": {
+                "foodtruck": {
+                  "active": null,
+                  "icon": null
+                },
+                "ostern": {
+                  "active": null,
+                  "icon": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "2",
+        "data": "02.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "3",
+        "data": "03.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "4",
+        "data": "04.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "5",
+        "data": "05.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "6",
+        "data": "06.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    },
+    {
+      "datum": {
+        "wochentag": "7",
+        "data": "07.02.2021",
+        "freitagsmodus": {
+          "fmwert": null,
+          "konf": []
+        },
+        "globaleetage": {
+          "icon_eg": null,
+          "icon_og": null,
+          "screenConfs": {
+            "screenog": []
+          }
+        },
+        "tageslabel": {
+          "vegetarisch": [],
+          "vegan": [],
+          "vital": [],
+          "schwein": [],
+          "fisch": [],
+          "rind": [],
+          "gefluegel": [],
+          "alkohol": [],
+          "lamm": [],
+          "knoblauch": [],
+          "regional": []
+        }
+      }
+    }
+  ]
+}

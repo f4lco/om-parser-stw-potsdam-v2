@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openmensa version="2.1" xmlns="http://openmensa.org/open-mensa-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  <canteen>
+    <day date="2021-01-27">
+      <category name="Angebot 3">
+        <meal>
+          <name>a</name>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+        <meal>
+          <name>Fangfrisches Lachsfilet auf Blattspinat, dazu Grillkartoffeln</name>
+          <note>Fisch</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot">
+        <meal>
+          <name>Linsensuppe mit Wiener Würstchen, dazu Brot</name>
+          <note>Rind</note>
+          <note>Schwein</note>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 1">
+        <meal>
+          <name>Vegane Frühlingsrolle mit Kokos- Currysauce, dazu Wokgemüse und Langkornreis</name>
+          <note>Knoblauch</note>
+          <note>Vegan</note>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Info">
+        <meal>
+          <name>Die Mensen Am Neuen Palais und Golm bleiben geöffnet.
+Sie können Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.
+Der Foodhopper in der Kaiser-Friedrich-Straße bietet ausschließlich Mittagessen to go an.</name>
+          <price role="employee">3.90</price>
+          <price role="other">0.00</price>
+          <price role="student">0.00</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2021-01-28">
+      <category name="Angebot 3">
+        <meal>
+          <name>Veganes Sojasteak mit geschmorten Zwiebeln, dazu Bratkartoffeln und Salat</name>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+        <meal>
+          <name>Schweinenackensteak mit geschmorten Zwiebeln, dazu Bratkartoffeln und Salat</name>
+          <note>Schwein</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 1">
+        <meal>
+          <name>Nudeln mit Bolognesesauce</name>
+          <note>Knoblauch</note>
+          <note>Rind</note>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+      <category name="Info">
+        <meal>
+          <name>Die Mensen Am Neuen Palais und Golm bleiben geöffnet.
+Sie können Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.
+Der Foodhopper in der Kaiser-Friedrich-Straße bietet ausschließlich Mittagessen to go an.</name>
+          <price role="employee">3.90</price>
+          <price role="other">0.00</price>
+          <price role="student">0.00</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2021-01-29">
+      <category name="Angebot">
+        <meal>
+          <name>Die Mensen Am Neuen Palais und Golm bleiben geöffnet.
+Sie können Ihr Mittagessen vor Ort verzehren oder to go mitnehmen.
+Der Foodhopper in der Kaiser-Friedrich-Straße bietet ausschließlich Mittagessen to go an.</name>
+          <price role="employee">3.90</price>
+          <price role="other">3.90</price>
+          <price role="student">2.10</price>
+        </meal>
+        <meal>
+          <name>Hefeklöße mit heißen Früchten</name>
+          <note>Vegetarisch</note>
+        </meal>
+        <meal>
+          <name>Germknödel mit Vanillesauce</name>
+          <note>Alkohol</note>
+          <note>Vegetarisch</note>
+        </meal>
+      </category>
+      <category name="Angebot 3">
+        <meal>
+          <name>Vegane Gemüsefrikdelle mit Ajvar-Dip, dazu Bulgur und Salat</name>
+          <note>Vegan</note>
+          <price role="employee">4.50</price>
+          <price role="other">4.50</price>
+          <price role="student">2.60</price>
+        </meal>
+      </category>
+      <category name="Angebot 1">
+        <meal>
+          <name>Currywurst mit hausgemachter Sauce, dazu Pommes frites und Salat</name>
+          <note>Schwein</note>
+        </meal>
+      </category>
+    </day>
+    <day date="2021-02-01">
+      <category name="Info">
+        <meal>
+          <name>Liebe Gäste! Den Speiseplan der laufenden Woche finden Sie immer montags hier .</name>
+          <price role="employee">3.10</price>
+          <price role="other">3.10</price>
+          <price role="student">1.60</price>
+        </meal>
+      </category>
+    </day>
+  </canteen>
+</openmensa>

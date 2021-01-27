@@ -62,3 +62,13 @@ def test_offers_dictionary():
     expected = _read_feed('offers-dict-output.xml')
 
     assert expected == actual
+
+
+def test_missing_category():
+    menu = _read_menu('missing-category.json')
+
+    actual = feed.render_menu(menu)
+
+    expected = _read_feed('missing-category-output.xml')
+
+    assert expected == actual
