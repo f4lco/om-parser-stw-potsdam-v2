@@ -3,6 +3,7 @@ requests = "*"
 pyopenmensa = "*"
 flask = "*"
 cachetools = "*"
+uwsgi = "*"
 
 [dev-packages]
 pytest = "*"
