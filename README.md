@@ -13,7 +13,7 @@ The current application is built with [Python][py], [PyOpenMensa][pom], and [Fla
 
 **Contributions** are always welcome, in particular if the response format of the canteens change. Feel free to file a PR with improvements.
 
-**Deployment** If in need of a deployment, file a PR to this fork: [kaifabian/om-parser-potsdam-v2](kai). Kai is currently in charge of running an instance of the parser and the registration on the OpenMensa platform.
+**Deployment** If in need of a deployment, file a PR to this fork: [kaifabian/om-parser-potsdam-v2][kai]. Kai is currently in charge of running an instance of the parser and the registration on the OpenMensa platform.
 
 **Where to go next** maybe use this parser or the OpenMensa API to source a new dataset for training a predictor for your favorite lunch?
 
