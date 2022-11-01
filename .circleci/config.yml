@@ -1,0 +1,41 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@1.5.0
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies 
+          command: make dependencies
+      - run:
+          name: Lint
+          command: make lint
+      - run:
+          name: Test
+          command: make test
+      - run:
+          name: Publish Coverage
+          command: make coverage_publish
+      - run:
+          name: Report Coverage
+          command: make coverage_report
+
+workflows:
+  default:
+    jobs:
+      - build-and-test
+  nightly-build:                                                                                                                                                          
+    triggers:                                                                                                                                                             
+      - schedule:                                                                                                                                                         
+          cron: "5 10 * * 1-5"                                                                                                                                               
+          filters:                                                                                                                                                        
+            branches:                                                                                                                                                     
+              only: master
+    jobs:
+      - build-and-test:
+          context: nightly

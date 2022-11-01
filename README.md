@@ -1,6 +1,6 @@
 # OpenMensa Parser STW Potsdam
 
-[![Build Status](https://travis-ci.com/f4lco/om-parser-stw-potsdam-v2.svg?branch=master)](https://travis-ci.com/f4lco/om-parser-stw-potsdam-v2)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/f4lco/om-parser-stw-potsdam-v2/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/f4lco/om-parser-stw-potsdam-v2/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/f4lco/om-parser-stw-potsdam-v2/badge.svg?branch=master)](https://coveralls.io/github/f4lco/om-parser-stw-potsdam-v2?branch=master)
 [![Read the Docs](https://readthedocs.org/projects/om-parser-stw-potsdam-v2/badge/?version=latest&style=flat)](https://om-parser-stw-potsdam-v2.readthedocs.io/en/latest/)
 

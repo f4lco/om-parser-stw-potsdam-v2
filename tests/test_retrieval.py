@@ -27,9 +27,7 @@ def canteen(request):
 
 
 def is_enabled():
-    user_enabled = bool(os.getenv(ENV_ENABLED))
-    travis_enabled = os.getenv('TRAVIS_EVENT_TYPE') == 'cron'
-    return user_enabled or travis_enabled
+    return bool(os.getenv(ENV_ENABLED))
 
 
 requires_online_api = pytest.mark.skipif(
