@@ -88,10 +88,10 @@ html_theme = 'alabaster'
 #
 html_theme_options = {
     'github_banner': True,
-    'github_button': False,
+    'github_button': True,
     'github_user': 'f4lco',
     'github_repo': 'om-parser-stw-potsdam-v2',
-    'travis_button': True,
+    'travis_button': False,
 }
 
 
