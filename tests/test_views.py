@@ -65,7 +65,7 @@ def _request_check_meals(client):
 
     assert response.status_code == 200
     meal = meal_names(response.data)[0]
-    assert meal == u"Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
+    assert meal == "Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
 
 
 @pytest.fixture

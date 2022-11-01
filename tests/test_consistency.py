@@ -17,7 +17,7 @@ def _canteen():
 
 
 def _read_menu(resource_name):
-    with open(_resource_path(resource_name)) as menu_file:
+    with open(_resource_path(resource_name), encoding='utf-8') as menu_file:
         return json.load(menu_file)
 
 
@@ -28,7 +28,7 @@ def _read_feed(resource_name):
 
 def test_meta_consistency():
     canteen = _canteen()
-    menu_feed_url = "canteens/{}/menu".format(canteen.key)
+    menu_feed_url = f"canteens/{canteen.key}/menu"
 
     actual = feed.render_meta(canteen, menu_feed_url)
 

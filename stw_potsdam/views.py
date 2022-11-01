@@ -30,14 +30,13 @@ if 'BASE_URL' in os.environ:  # pragma: no cover
     if base_url.path:
         app.config['APPLICATION_ROOT'] = base_url.path
 
-cache = ct.ttl.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
+cache = ct.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
 
 
 def canteen_not_found(config, canteen_name):
     log.warning('Canteen %s not found', canteen_name)
-    configured = ', '.join("'{}'".format(c) for c in config.keys())
-    message = "Canteen '{0}' not found, available: {1}".format(canteen_name,
-                                                               configured)
+    configured = ', '.join(f"'{c}'" for c in config.keys())
+    message = f"Canteen '{canteen_name}' not found, available: {configured}"
     return make_response(message, 404)
 
 

@@ -26,7 +26,7 @@ def api_online_one_shot():
         path = os.path.join(os.path.dirname(__file__),
                             'resources', 'input.json')
 
-        with open(path) as api_response:
+        with open(path, encoding='utf-8') as api_response:
             return 200, response_headers, api_response.read()
 
     responses = [

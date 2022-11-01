@@ -42,7 +42,7 @@ def download_menu(menu_params):
         'data': False
     }
 
-    request = requests.post(URL, params=params, json=body)
+    request = requests.post(URL, params=params, json=body, timeout=30)
 
     # urllib3 does not log response bodies - requests no longer supports it:
     # https://2.python-requests.org//en/master/api/#api-changes
