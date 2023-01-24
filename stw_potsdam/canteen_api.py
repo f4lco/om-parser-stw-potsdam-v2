@@ -8,7 +8,7 @@ import requests
 MenuParams = namedtuple('MenuParams', ('canteen_id', 'chash'))
 
 URL = 'https://www.studentenwerk-potsdam.de' + \
-      '/essen/unsere-mensen-cafeterien/detailinfos/'
+      '/essen/unsere-mensen/detailinfos/'
 
 LOG = logging.getLogger(__name__)
 
@@ -27,14 +27,10 @@ def download_menu(menu_params):
 
     :param MenuParams menu_params: the target canteen
     """
-    context = {
-        'record': 'pages_66',
-        'path': 'tt_content.list.20.ddfmensa_ddfmensajson'
-    }
 
     params = {
-        'tx_typoscriptrendering[context]': _param_json(context),
-        'tx_ddfmensa_ddfmensajson[mensa]': menu_params.canteen_id,
+        'tx_ddfmensa_ddfmensajson[interneid]': menu_params.canteen_id,
+        'type': 14529821235,
         'cHash': menu_params.chash
     }
 
