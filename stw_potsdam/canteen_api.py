@@ -27,7 +27,6 @@ def download_menu(menu_params):
 
     :param MenuParams menu_params: the target canteen
     """
-
     params = {
         'tx_ddfmensa_ddfmensajson[interneid]': menu_params.canteen_id,
         'type': 14529821235,
