@@ -11,6 +11,8 @@ from flask.logging import create_logger
 from stw_potsdam import feed
 from stw_potsdam.config import read_canteen_config
 from stw_potsdam.canteen_api import MenuParams, download_menu
+from stw_potsdam.swp_webspeiseplan_api import SWP_Webspeiseplan_API
+from stw_potsdam.swp_webspeiseplan_parser import SWP_Webspeiseplan_Parser
 
 CACHE_TIMEOUT = 45 * 60
 
@@ -32,6 +34,7 @@ if 'BASE_URL' in os.environ:  # pragma: no cover
 
 cache = ct.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
 
+swp_api = SWP_Webspeiseplan_API()
 
 def canteen_not_found(config, canteen_name):
     log.warning('Canteen %s not found', canteen_name)
@@ -90,8 +93,12 @@ def canteen_menu_feed(canteen_name):
         return canteen_not_found(config, canteen_name)
 
     canteen = config[canteen_name]
-    menu = get_menu(canteen)
-    return canteen_menu_feed_xml(menu)
+    swp_parser = SWP_Webspeiseplan_Parser(
+        swp_api.menus[canteen.name],
+        swp_api.meal_categories[canteen.name],
+        swp_api.outlets[canteen.name],
+    )
+    return _canteen_feed_xml(swp_parser.xml_feed)
 
 
 @app.route('/')

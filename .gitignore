@@ -4,4 +4,5 @@
 /.coverage
 /htmlcov
 *.pyc
-
+.devcontainer
+.vscode
