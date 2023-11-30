@@ -3,15 +3,21 @@ from datetime import date
 
 
 class Builder:
+    """A class method for creating a new class."""
+
     def __init__(self):
+        """Initialize the object for the OpenMensa Feed Doc XML."""
         self._doc = minidom.Document()
         self._om = self._doc.createElement("openmensa")
         self._om.setAttribute("version", "2.1")
         self._om.setAttribute("xmlns", "http://openmensa.org/open-mensa-v2")
-        self._om.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance")
+        self._om.setAttribute(
+            "xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance"
+        )
         self._om.setAttribute(
             "xsi:schemaLocation",
-            "http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd",
+            "http://openmensa.org/open-mensa-v2 "
+            + "http://openmensa.org/open-mensa-v2.xsd",
         )
         self._version = None
         self._name = None
@@ -28,6 +34,11 @@ class Builder:
 
     @property
     def version(self):
+        """The version of the device .
+
+        Returns:
+            [type]: [description]
+        """
         return self._version
 
     @version.setter
@@ -40,6 +51,11 @@ class Builder:
 
     @property
     def name(self):
+        """Name of the canteen .
+
+        Returns:
+            [type]: [description]
+        """
         return self._name
 
     @name.setter
@@ -52,12 +68,17 @@ class Builder:
 
     @property
     def address(self):
+        """The address of the canteen .
+
+        Returns:
+            [type]: [description]
+        """
         return self._address
 
     @address.setter
     def address(self, value: tuple[str, str, str]):
-        street_nr, zip, city = value
-        self._address = f"{street_nr}, {zip} {city}"
+        street_nr, zip_code, city = value
+        self._address = f"{street_nr}, {zip_code} {city}"
 
     @address.deleter
     def address(self):
@@ -65,6 +86,11 @@ class Builder:
 
     @property
     def city(self):
+        """Get the city of the canteen .
+
+        Returns:
+            [type]: [description]
+        """
         return self._city
 
     @city.setter
@@ -77,6 +103,11 @@ class Builder:
 
     @property
     def phone(self):
+        """The phone number .
+
+        Returns:
+            [type]: [description]
+        """
         return self._phone
 
     @phone.setter
@@ -89,6 +120,11 @@ class Builder:
 
     @property
     def email(self):
+        """The email address of the canteen .
+
+        Returns:
+            [type]: [description]
+        """
         return self._email
 
     @email.setter
@@ -101,6 +137,11 @@ class Builder:
 
     @property
     def location(self):
+        """Get a tuple containing the location as latitude and longitude .
+
+        Returns:
+            [type]: [description]
+        """
         return (self._longitude, self._latitude)
 
     @location.setter
@@ -115,6 +156,11 @@ class Builder:
 
     @property
     def availability(self):
+        """Whether the canteen is public or restriced.
+
+        Returns:
+            [type]: [description]
+        """
         return self._availability
 
     @availability.setter
@@ -130,11 +176,22 @@ class Builder:
 
     @property
     def times(self):
+        """Get the opening times the canteen.
+
+        Returns:
+            [type]: [description]
+        """
         return self._times
 
     @times.setter
     def times(self, value: dict[str, str]):
         def attach_weekday(tag: str, value: str):
+            """Attach a week tag to the week .
+
+            Args:
+                tag (str): [description]
+                value (str): [description]
+            """
             if value == "":
                 return
             d = self._doc.createElement(tag)
@@ -167,17 +224,31 @@ class Builder:
 
     @property
     def feed(self):
+        """Get a feed object .
+
+        Returns:
+            [type]: [description]
+        """
         return self._feed
 
     @feed.setter
     def feed(self, value: dict):
+        """Set the feed element .
+
+        Args:
+            value (dict): [description]
+        """
         name: str = value.get("name")
         priority: int = value.get("priority")
         url: str = value.get("url")
         source: str = value.get("source")
         hour: int = value.get("hour")
-        dayOfMonth: int | str = value.get("dayOfMonth") if value.get("dayOfMonth") else "*"
-        dayOfWeek: int | str = value.get("dayOfWeek") if value.get("dayOfWeek") else "*"
+        dayOfMonth: int | str = (
+            value.get("dayOfMonth") if value.get("dayOfMonth") else "*"
+        )
+        dayOfWeek: int | str = (
+            value.get("dayOfWeek") if value.get("dayOfWeek") else "*"
+        )
         month: int | str = value.get("month") if value.get("month") else "*"
         minute: int = value.get("minute") if value.get("minute") else 0
         retry: str = value.get("retry")
@@ -211,6 +282,11 @@ class Builder:
 
     @property
     def day(self):
+        """Returns the number of day of the week .
+
+        Returns:
+            [type]: [description]
+        """
         return self._day
 
     @day.setter
@@ -229,6 +305,15 @@ class Builder:
         prices: dict[str, float],
         note: str = None,
     ):
+        """Add a meal element to the document .
+
+        Args:
+            date (date): [description]
+            category (str): [description]
+            name (str): [description]
+            prices (dict[str, float]): [description]
+            note (str, optional): [description]. Defaults to None.
+        """
         meal = self._doc.createElement("meal")
         node = self._doc.createElement("name")
         meal.appendChild(node)
@@ -270,12 +355,23 @@ class Builder:
         meal_list.append(meal)
 
     def __append_node(self, tag: str, value: str):
+        """Create a node with a tag and text .
+
+        Args:
+            tag (str): [description]
+            value (str): [description]
+        """
         elem = self._doc.createElement(tag)
         self._canteen.appendChild(elem)
         node = self._doc.createTextNode(value)
         elem.appendChild(node)
 
     def toXML(self):
+        """Return a XML string representing the canteen.
+
+        Returns:
+            [type]: [description]
+        """
         self._doc.appendChild(self._om)
         if self.version:
             self.__append_node("version", self.version)

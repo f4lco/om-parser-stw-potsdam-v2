@@ -25,6 +25,7 @@ def _read_feed(resource_name):
     with io.open(_resource_path(resource_name), encoding='utf-8') as xml:
         return xml.read()
 
+
 @pytest.mark.xfail(strict=True)
 def test_meta_consistency():
     raise NotImplementedError()
@@ -34,6 +35,7 @@ def test_meta_consistency():
     expected = _read_feed('meta_output.xml')
     assert expected == actual
 
+
 @pytest.mark.xfail(strict=True)
 def test_menu_consistency():
     raise NotImplementedError()
@@ -41,6 +43,7 @@ def test_menu_consistency():
     actual = feed.render_menu(menu)
     expected = _read_feed('menu_output.xml')
     assert expected == actual
+
 
 @pytest.mark.xfail(strict=True)
 def test_empty_menu():
@@ -50,6 +53,7 @@ def test_empty_menu():
     expected = _read_feed('empty_menu_output.xml')
     assert expected == actual
 
+
 @pytest.mark.xfail(strict=True)
 def test_offers_dictionary():
     raise NotImplementedError()
@@ -57,6 +61,7 @@ def test_offers_dictionary():
     actual = feed.render_menu(menu)
     expected = _read_feed('offers-dict-output.xml')
     assert expected == actual
+
 
 @pytest.mark.xfail(strict=True)
 def test_missing_category():
