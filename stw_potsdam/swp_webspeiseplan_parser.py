@@ -5,6 +5,8 @@ from stw_potsdam.swp_webspeiseplan_api import SWP_Webspeiseplan_API
 
 
 class SWP_Webspeiseplan_Parser:
+    """Class method to parse SWP_Webspeiseplan."""
+
     def __init__(
         self,
         menu_data: list[dict],
@@ -12,6 +14,14 @@ class SWP_Webspeiseplan_Parser:
         outlet_data: dict,
         url: str,
     ):
+        """Initialize the parser .
+
+        Args:
+            menu_data (list[dict]): [description]
+            meal_categories (list[dict]): [description]
+            outlet_data (dict): [description]
+            url (str): [description]
+        """
         logging.basicConfig()
         self.logger = logging.getLogger(__name__)
         self.menu_data = menu_data
@@ -24,6 +34,11 @@ class SWP_Webspeiseplan_Parser:
         self.__parse_meals()
 
     def __parse_canteen(self, outlet: dict):
+        """Parse the outlet data from outlet.
+
+        Args:
+            outlet (dict): [description]
+        """
         canteen = self._builder
         canteen.name = outlet["name"]
         canteen.address = (
@@ -53,13 +68,16 @@ class SWP_Webspeiseplan_Parser:
         }
 
         times = {
-            k: v.replace("None, None", "").replace("None,", "").replace(", None", "")
+            k: v.replace("None, None", "")
+            .replace("None,", "")
+            .replace(", None", "")
             for k, v in times.items()
         }
 
         canteen.times = times
 
     def __parse_feed(self):
+        """Parse feed and set feed."""
         feed = {
             "name": "full",
             "priority": 0,
@@ -71,6 +89,7 @@ class SWP_Webspeiseplan_Parser:
         self._builder.feed = feed
 
     def __parse_meals(self):
+        """Parse the menu and adds it to the builder."""
         for menu in self.menu_data:
             for meal in menu["speiseplanGerichtData"]:
                 info = meal["speiseplanAdvancedGericht"]
@@ -78,7 +97,9 @@ class SWP_Webspeiseplan_Parser:
                 additional_info = meal["zusatzinformationen"]
                 self._builder.add_meal(
                     date=date,
-                    category=self.meal_categories[info["gerichtkategorieID"]]["name"],
+                    category=self.meal_categories[info["gerichtkategorieID"]][
+                        "name"
+                    ],
                     name=info["gerichtname"],
                     prices={
                         "student": additional_info["mitarbeiterpreisDecimal2"],
@@ -89,4 +110,9 @@ class SWP_Webspeiseplan_Parser:
 
     @property
     def xml_feed(self):
+        """Return the XML string of the builder.
+
+        Returns:
+            [type]: [description]
+        """
         return self._builder.toXML()

@@ -48,10 +48,12 @@ def test_canteen_not_found(client, url):
 def test_canteen_menu_api_unavailable(client, api_offline):
     _request_check_meals(client)
 
+
 @pytest.mark.xfail(strict=True)
 def test_canteen_menu_request(client, api_online_one_shot):
     raise NotImplementedError()
     _request_check_meals(client)
+
 
 @pytest.mark.xfail(strict=True)
 def test_canteen_menu_cached(client, api_online_one_shot):
@@ -66,8 +68,8 @@ def test_canteen_menu_second_request_indeed_fails(client, api_online_one_shot):
     views.cache.clear()
     _request_check_meals(client)
 
-@pytest.mark.xfail(strict=True)
 
+@pytest.mark.xfail(strict=True)
 def _request_check_meals(client):
     raise NotImplementedError()
     response = client.get("/canteens/griebnitzsee/xml")

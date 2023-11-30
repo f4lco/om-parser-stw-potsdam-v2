@@ -45,6 +45,7 @@ def get_menu():
     log.debug("Downloading menu for SWP")
     return SWP_Webspeiseplan_API()
 
+
 @app.route("/canteens/<canteen_name>")
 @app.route("/canteens/<canteen_name>/xml")
 def canteen_xml_feed(canteen_name):
@@ -63,8 +64,9 @@ def canteen_xml_feed(canteen_name):
     )
     xml = swp_parser.xml_feed.decode()
     response = make_response(xml)
-    response.mimetype = 'text/xml'
+    response.mimetype = "text/xml"
     return response
+
 
 @app.route("/")
 @app.route("/canteens")
