@@ -5,10 +5,8 @@ import logging
 import os
 import pytest
 
-from stw_potsdam import feed
 from stw_potsdam.config import read_canteen_config
-from stw_potsdam.canteen_api import download_menu
-from stw_potsdam.canteen_api import MenuParams
+from stw_potsdam.views import canteen_xml_feed
 
 # pragma pylint: disable=invalid-name,redefined-outer-name
 
@@ -39,13 +37,8 @@ requires_online_api = pytest.mark.skipif(
 
 @requires_online_api
 def test_retrieval(canteen):
-    feed.render_meta(canteen, f"/canteens/{canteen.key}/menu")
-    params = MenuParams(canteen_id=canteen.id, chash=canteen.chash)
-
     try:
-        menu = download_menu(params)
+        canteen_xml_feed(canteen.key)
     except json.JSONDecodeError as e:
         pytest.xfail('JSON endpoint returned garbage (issue #6)')
         raise e  # Appease PyCharm inspection - xfail always raises
-
-    feed.render_menu(menu)

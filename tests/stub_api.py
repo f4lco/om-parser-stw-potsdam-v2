@@ -3,7 +3,7 @@ import os
 import httpretty
 import pytest
 
-from stw_potsdam import canteen_api
+from stw_potsdam.swp_webspeiseplan_api import SWP_Webspeiseplan_API
 
 
 @pytest.fixture
@@ -35,7 +35,7 @@ def api_online_one_shot():
     ]
 
     httpretty.register_uri(httpretty.POST,
-                           canteen_api.URL,
+                           SWP_Webspeiseplan_API.URL_BASE,
                            responses=responses)
 
     httpretty.enable(allow_net_connect=False)

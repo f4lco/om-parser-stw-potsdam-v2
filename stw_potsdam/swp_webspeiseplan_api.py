@@ -6,10 +6,11 @@ import json
 
 
 class SWP_Webspeiseplan_API:
+    URL_BASE = "https://swp.webspeiseplan.de"
+
     def __init__(self):
         logging.basicConfig()
         self.logger = logging.getLogger(__name__)
-        self.url_base = "https://swp.webspeiseplan.de"
         self.__parse_token()
         params = {
             "token": self.proxy_token,
@@ -25,7 +26,7 @@ class SWP_Webspeiseplan_API:
         for outlet in self.outlets.values():
             params["model"] = "menu"
             params["location"] = outlet["standortID"]
-            params["languagetype"] = 2
+            params["languagetype"] = 1
             params["_"] = int(time.time() * 1000)
             menu = self.__parse_model(params)
             self.menus[outlet["name"]] = menu
@@ -37,12 +38,12 @@ class SWP_Webspeiseplan_API:
             self.meal_categories[outlet["name"]] = id2cat
 
     def __parse_token(self):
-        req = urllib.request.Request(self.url_base)
+        req = urllib.request.Request(self.URL_BASE)
         with urllib.request.urlopen(req) as resp:
             txt = resp.read().decode("utf-8")
         match = re.findall(r"/main.[0-9a-f]+.js", txt)[0]
         self.logger.debug(f"__parse_token: downloading script {match}")
-        req = urllib.request.Request(f"{self.url_base}{match}")
+        req = urllib.request.Request(f"{self.URL_BASE}{match}")
         with urllib.request.urlopen(req) as resp:
             txt = resp.read().decode("utf-8")
         self.proxy_token = re.findall(r"PROXY_TOKEN:\"([0-9a-f]+)\"", txt)[0]
@@ -70,7 +71,7 @@ class SWP_Webspeiseplan_API:
         req.add_header("X-Requested-With", "XMLHttpRequest")
 
     def __parse_model(self, params: dict):
-        url = f"{self.url_base}/index.php?" + "&".join(
+        url = f"{self.URL_BASE}/index.php?" + "&".join(
             [f"{k}={v}" for k, v in params.items()]
         )
         self.logger.debug(f"__parse_model: {url}")
