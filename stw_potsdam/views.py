@@ -9,8 +9,7 @@ from flask import Flask, jsonify, make_response, url_for
 from flask.logging import create_logger
 
 from stw_potsdam.config import read_canteen_config
-from stw_potsdam.swp_webspeiseplan_api import SWP_Webspeiseplan_API
-from stw_potsdam.swp_webspeiseplan_parser import SWP_Webspeiseplan_Parser
+from stw_potsdam.xml_types.builder import Builder
 
 CACHE_TIMEOUT = 45 * 60
 
@@ -18,7 +17,8 @@ CACHE_TIMEOUT = 45 * 60
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-
+cache = ct.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
+config = read_canteen_config()
 log = create_logger(app)
 
 if "BASE_URL" in os.environ:  # pragma: no cover
@@ -30,10 +30,8 @@ if "BASE_URL" in os.environ:  # pragma: no cover
     if base_url.path:
         app.config["APPLICATION_ROOT"] = base_url.path
 
-cache = ct.TTLCache(maxsize=30, ttl=CACHE_TIMEOUT)
 
-
-def canteen_not_found(config, canteen_name):
+def canteen_not_found(canteen_name):
     log.warning("Canteen %s not found", canteen_name)
     configured = ", ".join(f"'{c}'" for c in config.keys())
     message = f"Canteen '{canteen_name}' not found, available: {configured}"
@@ -41,28 +39,19 @@ def canteen_not_found(config, canteen_name):
 
 
 @ct.cached(cache=cache)
-def get_menu():
+def update_builder():
     log.debug("Downloading menu for SWP")
-    return SWP_Webspeiseplan_API()
+    return Builder(config)
 
 
 @app.route("/canteens/<canteen_name>")
 @app.route("/canteens/<canteen_name>/xml")
 def canteen_xml_feed(canteen_name):
-    config = read_canteen_config()
-
     if canteen_name not in config:
-        return canteen_not_found(config, canteen_name)
+        return canteen_not_found(canteen_name)
 
-    canteen = config[canteen_name]
-    swp_api = get_menu()
-    swp_parser = SWP_Webspeiseplan_Parser(
-        swp_api.menus[canteen.name],
-        swp_api.meal_categories[canteen.name],
-        swp_api.outlets[canteen.name],
-        url_for("canteen_xml_feed", canteen_name=canteen.key, _external=True),
-    )
-    xml = swp_parser.xml_feed.decode()
+    builder = update_builder()
+    xml = builder.get_xml(canteen_name)
     response = make_response(xml)
     response.mimetype = "text/xml"
     return response
@@ -71,7 +60,6 @@ def canteen_xml_feed(canteen_name):
 @app.route("/")
 @app.route("/canteens")
 def canteen_index():
-    config = read_canteen_config()
     return jsonify(
         {
             key: url_for("canteen_xml_feed", canteen_name=key, _external=True)

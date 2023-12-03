@@ -2,9 +2,6 @@
 import pytest
 
 from stw_potsdam import views
-from flask import url_for
-
-from tests.response_util import meal_names
 
 # pytest fixtures are linked via parameter names of test methods
 # pragma pylint: disable=unused-import,redefined-outer-name,unused-argument
@@ -52,14 +49,14 @@ def test_canteen_menu_api_unavailable(client, api_offline):
 @pytest.mark.xfail(strict=True)
 def test_canteen_menu_request(client, api_online_one_shot):
     raise NotImplementedError()
-    _request_check_meals(client)
+    # _request_check_meals(client)
 
 
 @pytest.mark.xfail(strict=True)
 def test_canteen_menu_cached(client, api_online_one_shot):
     raise NotImplementedError()
-    _request_check_meals(client)
-    _request_check_meals(client)
+    # _request_check_meals(client)
+    # _request_check_meals(client)
 
 
 @pytest.mark.xfail(strict=True)
@@ -72,10 +69,10 @@ def test_canteen_menu_second_request_indeed_fails(client, api_online_one_shot):
 @pytest.mark.xfail(strict=True)
 def _request_check_meals(client):
     raise NotImplementedError()
-    response = client.get("/canteens/griebnitzsee/xml")
-    assert response.status_code == 200
-    meal = meal_names(response.data)[0]
-    print(meal)
+    # response = client.get("/canteens/griebnitzsee/xml")
+    # assert response.status_code == 200
+    # meal = meal_names(response.data)[0]
+    # print(meal)
     # assert meal == "Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
 
 
