@@ -28,6 +28,7 @@ class SWPWebspeiseplanParser:
             "city": addr_info["city"],
             "phone": outlet["contactInfo"][0]["phone"],
             "email": outlet["contactInfo"][0]["email"],
+            "availability": outlet["isPublic"]
         }
 
         if outlet["positionInfo"]:
@@ -36,7 +37,6 @@ class SWPWebspeiseplanParser:
                 outlet["positionInfo"]["latitude"],
             )
         canteen_meta = CanteenMeta(**meta)
-        # TODO: availability via locations isPublic
         weekday_dict = {
             "monday": f"{outlet['moZeit1']}, {outlet['moZeit2']}",
             "tuesday": f"{outlet['diZeit1']}, {outlet['diZeit2']}",

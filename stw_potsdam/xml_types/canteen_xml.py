@@ -32,7 +32,11 @@ class CanteenMeta:
 
     @availability.setter
     def availability(self, value: str):
-        if value in ("public", "restricted"):
+        if value is True:
+            self._availability = "public"
+        elif value is False:
+            self._availability = "restricted"
+        elif value in ("public", "restricted"):
             self._availability = value
         else:
             raise ValueError("only 'public' or 'restricted' are allowed.")
@@ -89,8 +93,12 @@ class CanteenXML:
         canteen.appendChild(email)
         if self.canteen_meta.location:
             location = doc.createElement("location")
-            location.setAttribute("longitude", str(self.canteen_meta.location[0]))
-            location.setAttribute("latitude", str(self.canteen_meta.location[1]))
+            location.setAttribute(
+                "longitude", str(self.canteen_meta.location[0])
+            )
+            location.setAttribute(
+                "latitude", str(self.canteen_meta.location[1])
+            )
             canteen.appendChild(location)
         availability = self.__create_node(
             doc, "availability", self.canteen_meta.availability

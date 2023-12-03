@@ -20,6 +20,11 @@ class SWPWebspeiseplanAPI:
         logging.basicConfig()
         proxy_token = self.parse_token()
         self.outlets = self.parse_outlets(proxy_token)
+        self.locations: dict[str, dict] = {}
+        locations = {
+            item["id"]: item
+            for item in self.parse_location(proxy_token)
+        }
         self.menus: dict[str, dict] = {}
         self.meal_categories: dict[str, dict] = {}
         for outlet in self.outlets.values():
@@ -29,6 +34,7 @@ class SWPWebspeiseplanAPI:
             id2cat = {item["gerichtkategorieID"]: item for item in categories}
             self.menus[outlet["name"]] = menu
             self.meal_categories[outlet["name"]] = id2cat
+            self.locations[outlet["name"]] = locations[location]
 
     def __spoof_req_headers(self, req: urllib.request.Request):
         """Add headers to a request .
@@ -134,6 +140,18 @@ class SWPWebspeiseplanAPI:
             "token": proxy_token,
             "model": "mealCategory",
             "location": location,
+            "languagetype": 1,
+            "_": int(time.time() * 1000),
+        }
+        menu = self.parse_model(params)
+        return menu
+
+    def parse_location(self, proxy_token: str) -> list[dict]:
+        """Get the meal catrgories for a specific location."""
+        params = {
+            "token": proxy_token,
+            "model": "location",
+            "location": "",
             "languagetype": 1,
             "_": int(time.time() * 1000),
         }

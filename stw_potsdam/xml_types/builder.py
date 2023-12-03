@@ -29,6 +29,8 @@ class Builder:
             outlet = swp_api.outlets[ntup.name]
             menus = swp_api.menus[ntup.name]
             categories = swp_api.meal_categories[ntup.name]
+            locations = swp_api.locations[ntup.name]
+            outlet["isPublic"] = locations["isPublic"]
             canteen = swp_parser.parse_canteen_meta_times(outlet)
             meals = swp_parser.parse_meals(menus, categories)
             for kwargs in meals:
