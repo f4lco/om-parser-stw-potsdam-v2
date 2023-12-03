@@ -4,9 +4,8 @@ import json
 import logging
 import os
 import pytest
-
 from stw_potsdam.config import read_canteen_config
-from stw_potsdam.views import canteen_xml_feed
+from stw_potsdam.views import canteen_xml_feed, app
 
 # pragma pylint: disable=invalid-name,redefined-outer-name
 
@@ -38,7 +37,8 @@ requires_online_api = pytest.mark.skipif(
 @requires_online_api
 def test_retrieval(canteen):
     try:
-        canteen_xml_feed(canteen.key)
+        with app.app_context(), app.test_request_context():
+            canteen_xml_feed(canteen.key)
     except json.JSONDecodeError as e:
         pytest.xfail('JSON endpoint returned garbage (issue #6)')
         raise e  # Appease PyCharm inspection - xfail always raises
