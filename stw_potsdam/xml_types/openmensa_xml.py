@@ -18,10 +18,10 @@ class OpenMensaXML:
         self.canteen = canteen
 
     def __create_version_node(self, doc: minidom.Document):
-        e = doc.createElement("version")
-        tn = doc.createTextNode(self.version)
-        e.appendChild(tn)
-        return e
+        elem = doc.createElement("version")
+        txt_node = doc.createTextNode(self.version)
+        elem.appendChild(txt_node)
+        return elem
 
     def xml_element(self, doc: minidom.Document):
         """Create openmensa XML tag.
@@ -32,20 +32,20 @@ class OpenMensaXML:
         Returns:
             _type_: _description_
         """
-        om = doc.createElement("openmensa")
-        om.setAttribute("version", "2.1")
-        om.setAttribute("xmlns", "http://openmensa.org/open-mensa-v2")
-        om.setAttribute(
+        open_mensa = doc.createElement("openmensa")
+        open_mensa.setAttribute("version", "2.1")
+        open_mensa.setAttribute("xmlns", "http://openmensa.org/open-mensa-v2")
+        open_mensa.setAttribute(
             "xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance"
         )
-        om.setAttribute(
+        open_mensa.setAttribute(
             "xsi:schemaLocation",
             "http://openmensa.org/open-mensa-v2 "
             + "http://openmensa.org/open-mensa-v2.xsd",
         )
 
         version = self.__create_version_node(doc)
-        om.appendChild(version)
+        open_mensa.appendChild(version)
         canteen = self.canteen.xml_element(doc)
-        om.appendChild(canteen)
-        return om
+        open_mensa.appendChild(canteen)
+        return open_mensa

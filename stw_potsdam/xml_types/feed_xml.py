@@ -71,12 +71,12 @@ class FeedXML:
         feed.appendChild(schedule)
 
         url = doc.createElement("url")
-        tn = doc.createTextNode(self.url)
-        url.appendChild(tn)
+        txt_node = doc.createTextNode(self.url)
+        url.appendChild(txt_node)
         feed.appendChild(url)
 
         source = doc.createElement("source")
-        tn = doc.createTextNode(self.source)
-        source.appendChild(tn)
+        txt_node = doc.createTextNode(self.source)
+        source.appendChild(txt_node)
         feed.appendChild(source)
         return feed

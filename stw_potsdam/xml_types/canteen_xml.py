@@ -75,10 +75,10 @@ class CanteenXML:
         self.days = {} if days is None else days
 
     def __create_node(self, doc: minidom.Document, tag: str, value: str):
-        e = doc.createElement(tag)
-        tn = doc.createTextNode(value)
-        e.appendChild(tn)
-        return e
+        elem = doc.createElement(tag)
+        txt_node = doc.createTextNode(value)
+        elem.appendChild(txt_node)
+        return elem
 
     def __append_meta(self, doc: minidom.Document, canteen: minidom.Element):
         name = self.__create_node(doc, "name", self.canteen_meta.name)
