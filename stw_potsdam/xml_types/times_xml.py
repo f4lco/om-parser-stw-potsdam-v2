@@ -35,12 +35,12 @@ class TimesXML:
                 raise KeyError()
 
     def __create_node(self, doc: minidom.Document, tag: str, value: str):
-        e = doc.createElement(tag)
+        elem = doc.createElement(tag)
         if value == "geschlossen":
-            e.setAttribute("closed", "true")
+            elem.setAttribute("closed", "true")
         else:
-            e.setAttribute("open", value)
-        return e
+            elem.setAttribute("open", value)
+        return elem
 
     def xml_element(self, doc: minidom.Document):
         """Return the XML representation.

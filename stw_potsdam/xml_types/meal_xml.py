@@ -26,13 +26,13 @@ class MealXML:
         """
         meal = doc.createElement("meal")
         name = doc.createElement("name")
-        tn = doc.createTextNode(self.name)
-        name.appendChild(tn)
+        txt_node = doc.createTextNode(self.name)
+        name.appendChild(txt_node)
         meal.appendChild(name)
         if self.note is not None:
             note = doc.createElement("note")
-            tn = doc.createTextNode(self.note)
-            note.appendChild(tn)
+            txt_node = doc.createTextNode(self.note)
+            note.appendChild(txt_node)
             meal.appendChild(note)
 
         for key, val in self.price.items():
@@ -40,7 +40,7 @@ class MealXML:
                 continue
             price = doc.createElement("price")
             price.setAttribute("role", key)
-            tn = doc.createTextNode(f"{val:.2f}")
-            price.appendChild(tn)
+            txt_node = doc.createTextNode(f"{val:.2f}")
+            price.appendChild(txt_node)
             meal.appendChild(price)
         return meal
