@@ -7,6 +7,8 @@ from stw_potsdam import views
 # pragma pylint: disable=unused-import,redefined-outer-name,unused-argument
 from tests.stub_api import api_offline, api_online_one_shot
 
+from .response_util import meal_names
+
 # Long test method names are not 'snake case'!
 # See https://github.com/PyCQA/pylint/issues/2047
 # The fix has not been ported to Python 2.x.
@@ -46,17 +48,13 @@ def test_canteen_menu_api_unavailable(client, api_offline):
     _request_check_meals(client)
 
 
-@pytest.mark.xfail(strict=True)
 def test_canteen_menu_request(client, api_online_one_shot):
-    raise NotImplementedError()
-    # _request_check_meals(client)
+    _request_check_meals(client)
 
 
-@pytest.mark.xfail(strict=True)
 def test_canteen_menu_cached(client, api_online_one_shot):
-    raise NotImplementedError()
-    # _request_check_meals(client)
-    # _request_check_meals(client)
+    _request_check_meals(client)
+    _request_check_meals(client)
 
 
 @pytest.mark.xfail(strict=True)
@@ -66,14 +64,12 @@ def test_canteen_menu_second_request_indeed_fails(client, api_online_one_shot):
     _request_check_meals(client)
 
 
-@pytest.mark.xfail(strict=True)
 def _request_check_meals(client):
-    raise NotImplementedError()
-    # response = client.get("/canteens/griebnitzsee/xml")
-    # assert response.status_code == 200
-    # meal = meal_names(response.data)[0]
-    # print(meal)
-    # assert meal == "Gefüllter Germknödel \nmit Vanillesauce und Mohnzucker"
+    response = client.get('/canteens/griebnitzsee/xml')
+
+    assert response.status_code == 200
+    meals = meal_names(response.data)
+    assert "Rostbratwurst mit Sauerkraut und Salzkartoffeln" in meals
 
 
 @pytest.fixture
