@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime, date
 from stw_potsdam.xml_types.canteen_xml import CanteenMeta, CanteenXML
-from stw_potsdam.xml_types.times_xml import TimesXML
+from stw_potsdam.xml_types.times_xml import CanteenOpenTimespec, TimesXML
 from stw_potsdam.xml_types.meal_xml import MealXML
 
 
@@ -38,23 +38,21 @@ class SWPWebspeiseplanParser:
             )
         canteen_meta = CanteenMeta(**meta)
         weekday_dict = {
-            "monday": f"{outlet['moZeit1']}, {outlet['moZeit2']}",
-            "tuesday": f"{outlet['diZeit1']}, {outlet['diZeit2']}",
-            "wednesday": f"{outlet['miZeit1']}, {outlet['miZeit2']}",
-            "thursday": f"{outlet['doZeit1']}, {outlet['doZeit2']}",
-            "friday": f"{outlet['frZeit1']}, {outlet['frZeit2']}",
-            "saturday": f"{outlet['saZeit1']}, {outlet['saZeit2']}",
-            "sunday": f"{outlet['soZeit1']}, {outlet['soZeit2']}",
+            # this approach only lists the first (valid) opening time,
+            # since OpenMensa does not support multiple time specs
+            # (yet).
+            "monday": outlet['moZeit1'] or outlet['moZeit2'],
+            "tuesday": outlet['diZeit1'] or outlet['diZeit2'],
+            "wednesday": outlet['miZeit1'] or outlet['miZeit2'],
+            "thursday": outlet['doZeit1'] or outlet['doZeit2'],
+            "friday": outlet['frZeit1'] or outlet['frZeit2'],
+            "saturday": outlet['saZeit1'] or outlet['saZeit2'],
+            "sunday": outlet['soZeit1'] or outlet['soZeit2'],
         }
 
-        weekday_dict = {
-            k: v.replace("None, None", "")
-            .replace("None,", "")
-            .replace(", None", "")
-            for k, v in weekday_dict.items()
-        }
-
-        canteen_times = TimesXML(weekday_dict)
+        canteen_times = TimesXML({
+            k: CanteenOpenTimespec(v) for k, v in weekday_dict.items()
+        })
         canteen = CanteenXML(canteen_meta, canteen_times)
         return canteen
 
