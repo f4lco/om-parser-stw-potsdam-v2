@@ -40,10 +40,9 @@ class MealXML:
                 continue
             price = doc.createElement("price")
             price.setAttribute("role", key)
-            try:
-                txt_node = doc.createTextNode(f"{val:.2f}")
-            except Exception:
-                txt_node = doc.createTextNode("0.00")
+            if val is None:
+                val = 0.0
+            txt_node = doc.createTextNode(f"{val:.2f}")
             price.appendChild(txt_node)
             meal.appendChild(price)
         return meal
