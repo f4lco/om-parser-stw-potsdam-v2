@@ -15,8 +15,9 @@ class CanteenOpenTimespec(str):
         "",
     }
 
-    PATTERN = (r'.*(?P<hour1>\d{1,2}):(?P<min1>\d{1,2})\s*'
-               r'-\s*(?P<hour2>\d{1,2}):(?P<min2>\d{1,2}).*')
+    PATTERN = (r'.*(?P<hour1>\d{1,2}):(?P<min1>\d{1,2})'
+               r'\D*(?P<hour2>\d{1,2}):(?P<min2>\d{1,2}).*')
+    
     MATCHER = re.compile(PATTERN)
 
     def __new__(cls, spec):
@@ -75,10 +76,9 @@ class TimesXML:
             else:
                 raise KeyError()
 
-    def __create_node(self,
-                      doc: minidom.Document,
-                      tag: str,
-                      value: CanteenOpenTimespec):
+    def __create_node(
+        self, doc: minidom.Document, tag: str, value: CanteenOpenTimespec
+    ):
         elem = doc.createElement(tag)
         if value in CanteenOpenTimespec.CLOSED_VALID_VALUES:
             elem.setAttribute("closed", "true")
