@@ -17,7 +17,7 @@ class CanteenOpenTimespec(str):
 
     PATTERN = (r'.*(?P<hour1>\d{1,2}):(?P<min1>\d{1,2})'
                r'\D*(?P<hour2>\d{1,2}):(?P<min2>\d{1,2}).*')
-    
+
     MATCHER = re.compile(PATTERN)
 
     def __new__(cls, spec):
