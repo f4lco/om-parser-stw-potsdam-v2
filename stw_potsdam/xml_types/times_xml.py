@@ -76,9 +76,10 @@ class TimesXML:
             else:
                 raise KeyError()
 
-    def __create_node(
-        self, doc: minidom.Document, tag: str, value: CanteenOpenTimespec
-    ):
+    def __create_node(self,
+                      doc: minidom.Document,
+                      tag: str,
+                      value: CanteenOpenTimespec):
         elem = doc.createElement(tag)
         if value in CanteenOpenTimespec.CLOSED_VALID_VALUES:
             elem.setAttribute("closed", "true")
