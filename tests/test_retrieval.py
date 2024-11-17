@@ -39,6 +39,5 @@ def test_retrieval(canteen):
     try:
         with app.app_context(), app.test_request_context():
             canteen_xml_feed(canteen.key)
-    except json.JSONDecodeError as e:
+    except json.JSONDecodeError:
         pytest.xfail('JSON endpoint returned garbage (issue #6)')
-        raise e  # Appease PyCharm inspection - xfail always raises
