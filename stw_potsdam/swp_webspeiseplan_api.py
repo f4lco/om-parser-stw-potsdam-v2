@@ -92,14 +92,23 @@ class SWPWebspeiseplanAPI:
         req = urllib.request.Request(SWPWebspeiseplanAPI.URL_BASE)
         with urllib.request.urlopen(req) as resp:
             txt = resp.read().decode("utf-8")
-        match = re.findall(r"/main.[0-9a-f]+.js", txt)[0]
+        match = re.findall(r"/main.[0-9a-f]+.js", txt)
+
+        if match:
+            match = match[0]
+        else:
+            # Development build made it to production, which does not produce
+            # JS chunks with cache-busting filenames
+            match = "/index.js"
+
         SWPWebspeiseplanAPI.logger.debug(
             "__parse_token: downloading script %s", match
         )
         req = urllib.request.Request(f"{SWPWebspeiseplanAPI.URL_BASE}{match}")
         with urllib.request.urlopen(req) as resp:
             txt = resp.read().decode("utf-8")
-        proxy_token = re.findall(r"PROXY_TOKEN:\"([0-9a-f]+)\"", txt)[0]
+        proxy_token =\
+            re.findall(r"PROXY_TOKEN:\s*[\"']([0-9a-f]+)[\"']", txt)[0]
         SWPWebspeiseplanAPI.logger.debug(
             "__parse_token: PROXY_TOKEN %s", proxy_token
         )

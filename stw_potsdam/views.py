@@ -71,3 +71,7 @@ def canteen_index():
 @app.route("/health_check")
 def health_check():
     return make_response("OK", 200)
+
+
+if __name__ == '__main__':
+    app.run()
