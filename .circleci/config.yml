@@ -29,13 +29,13 @@ workflows:
   default:
     jobs:
       - build-and-test
-  nightly-build:                                                                                                                                                          
-    triggers:                                                                                                                                                             
-      - schedule:                                                                                                                                                         
-          cron: "5 10 * * 1-5"                                                                                                                                               
-          filters:                                                                                                                                                        
-            branches:                                                                                                                                                     
-              only: master
-    jobs:
-      - build-and-test:
-          context: nightly
+  #nightly-build:                                                                                                                                                          
+  #  triggers:                                                                                                                                                             
+  #    - schedule:                                                                                                                                                         
+  #        cron: "5 10 * * 1-5"                                                                                                                                               
+  #        filters:                                                                                                                                                        
+  #          branches:                                                                                                                                                     
+  #            only: master
+  #  jobs:
+  #    - build-and-test:
+  #        context: nightly
