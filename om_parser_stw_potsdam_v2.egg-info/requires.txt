@@ -1,0 +1,17 @@
+requests
+pyopenmensa
+flask
+cachetools
+uwsgi
+
+[dev]
+pytest
+coveralls
+pytest-cov
+httpretty
+pycodestyle
+pydocstyle
+pylint
+sphinx
+sphinx-autobuild
+sphinx-rtd-theme

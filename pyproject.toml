@@ -1,0 +1,28 @@
+[project]
+name = "om-parser-stw-potsdam-v2"
+version = "2.0.1"
+description = "OpenMensa parser components for Studentenwerk Potsdam."
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+  "requests",
+  "pyopenmensa",
+  "flask",
+  "cachetools",
+  "uwsgi",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "coveralls",
+  "pytest-cov",
+  "httpretty",
+  "pycodestyle",
+  "pydocstyle",
+  "pylint",
+  "sphinx",
+  "sphinx-autobuild",
+  "sphinx-rtd-theme",
+]

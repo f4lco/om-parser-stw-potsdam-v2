@@ -38,6 +38,10 @@ requires_online_api = pytest.mark.skipif(
 def test_retrieval(canteen):
     try:
         with app.app_context(), app.test_request_context():
-            canteen_xml_feed(canteen.key)
+            response = canteen_xml_feed(canteen.key)
+            assert response.status_code == 200
+            data = response.get_data(as_text=True)
+            assert "<openmensa" in data
+            assert "<canteen>" in data
     except json.JSONDecodeError:
         pytest.xfail('JSON endpoint returned garbage (issue #6)')
