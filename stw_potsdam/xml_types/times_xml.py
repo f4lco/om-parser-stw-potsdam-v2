@@ -26,6 +26,11 @@ class CanteenOpenTimespec(str):
         Args:
             spec (str | bool | None): time specification
         """
+        if isinstance(spec, str):
+            spec = spec.strip()
+            normalized = spec.lower()
+            if normalized in (cls.CLOSED, "geschllossen"):
+                spec = cls.CLOSED
         if spec in cls.CLOSED_VALID_VALUES:
             return super().__new__(cls, cls.CLOSED)
 

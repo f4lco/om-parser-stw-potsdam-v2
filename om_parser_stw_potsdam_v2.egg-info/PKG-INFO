@@ -1,3 +1,26 @@
+Metadata-Version: 2.4
+Name: om-parser-stw-potsdam-v2
+Version: 2.0.1
+Summary: OpenMensa parser components for Studentenwerk Potsdam.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pyopenmensa
+Requires-Dist: flask
+Requires-Dist: cachetools
+Requires-Dist: uwsgi
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coveralls; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: httpretty; extra == "dev"
+Requires-Dist: pycodestyle; extra == "dev"
+Requires-Dist: pydocstyle; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx-autobuild; extra == "dev"
+Requires-Dist: sphinx-rtd-theme; extra == "dev"
+
 # OpenMensa Parser STW Potsdam
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/f4lco/om-parser-stw-potsdam-v2/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/f4lco/om-parser-stw-potsdam-v2/tree/master)

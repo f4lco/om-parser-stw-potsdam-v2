@@ -4,5 +4,7 @@
 /.coverage
 /htmlcov
 *.pyc
+.venv
+__pycache__
 .devcontainer
 .vscode
