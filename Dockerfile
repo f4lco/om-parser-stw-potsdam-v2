@@ -4,7 +4,7 @@ ARG LISTEN_PORT=3080
 
 
 ### Shared base container
-FROM python:3.13-alpine as basesys
+FROM python:3.13-slim AS basesys
 ARG DEPLOY_DIR
 ARG USERNAME
 
@@ -12,7 +12,7 @@ ARG USERNAME
 RUN pip install pipenv
 
 # Add app user
-RUN adduser -D ${USERNAME}
+RUN adduser --disabled-password ${USERNAME}
 
 # Create app folder
 RUN mkdir -p ${DEPLOY_DIR}
@@ -38,13 +38,13 @@ USER ${USERNAME}
 
 
 ### Build & test container
-FROM basesys as buildsys
+FROM basesys AS buildsys
 ARG DEPLOY_DIR
 ARG USERNAME
 
 # Install required build dependencies
 USER root
-RUN apk add make gcc musl-dev linux-headers python3-dev
+RUN apt-get update && apt-get install -y build-essential python3-dev
 
 # Install environment
 USER ${USERNAME}
@@ -70,7 +70,7 @@ ARG USERNAME
 
 # Install dependencies
 USER root
-RUN apk add curl
+RUN apt-get update && apt-get install -y curl libpython3.13
 
 # Copy built app
 USER ${USERNAME}
@@ -82,6 +82,6 @@ ENV LISTEN_PORT=${LISTEN_PORT}
 ENV LISTEN=0.0.0.0:${LISTEN_PORT}
 
 EXPOSE ${LISTEN_PORT}
-CMD pipenv run uwsgi --master --http11-socket $LISTEN --plugins python --protocol uwsgi --wsgi stw_potsdam.views:app --virtualenv ./.venv
+CMD ["pipenv", "run", "uwsgi", "--master", "--http11-socket", "$LISTEN", "--plugins", "python", "--protocol", "uwsgi", "--wsgi", "stw_potsdam.views:app", "--virtualenv", "./.venv"]
 
 HEALTHCHECK --interval=15s --timeout=3s CMD curl -f http://127.0.0.1:$LISTEN_PORT/health_check || exit 1
