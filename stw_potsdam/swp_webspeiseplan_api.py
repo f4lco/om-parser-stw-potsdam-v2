@@ -144,7 +144,7 @@ class SWPWebspeiseplanAPI:
     def parse_meal_category(
         self, proxy_token: str, location: int
     ) -> list[dict]:
-        """Get the meal catrgories for a specific location."""
+        """Get the meal categories for a specific location."""
         params = {
             "token": proxy_token,
             "model": "mealCategory",
@@ -152,11 +152,11 @@ class SWPWebspeiseplanAPI:
             "languagetype": 1,
             "_": int(time.time() * 1000),
         }
-        menu = self.parse_model(params)
-        return menu
+        categories = self.parse_model(params)
+        return categories
 
     def parse_location(self, proxy_token: str) -> list[dict]:
-        """Get the meal catrgories for a specific location."""
+        """Get the locations from the server."""
         params = {
             "token": proxy_token,
             "model": "location",
@@ -164,5 +164,5 @@ class SWPWebspeiseplanAPI:
             "languagetype": 1,
             "_": int(time.time() * 1000),
         }
-        menu = self.parse_model(params)
-        return menu
+        locations = self.parse_model(params)
+        return locations
