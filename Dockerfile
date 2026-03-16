@@ -4,7 +4,7 @@ ARG LISTEN_PORT=3080
 
 
 ### Shared base container
-FROM python:3.13-slim AS basesys
+FROM python:3.14-slim AS basesys
 ARG DEPLOY_DIR
 ARG USERNAME
 
